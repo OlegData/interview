@@ -1,6 +1,8 @@
 ## Python
 
-**What is Python, what are the benefits of using it, and what do you understand of PEP 8?**
+---
+
+**1. What is Python, what are the benefits of using it, and what do you understand of PEP 8?**
 
 Python is a high-level, interpreted, dynamically typed programming language focused on readability and simplicity. It supports multiple paradigms  
 (OOP, procedural, functional) and has a large standard library and ecosystem.
@@ -28,9 +30,11 @@ The statement is pass. It is a no-op statement — it does nothing but is used a
 Оператор — pass. Он ничего не делает, но используется как заглушка, когда по синтаксису требуется инструкция (например, в пустой функции, классе,  
 цикле или условии).
 
-**What’s the process to get the home directory using ‘~’ in Python?**
+---
 
-Use os.path.expanduser("~") or Path.home() from pathlib.
+**2. What’s the process to get the home directory using ‘~’ in Python?**
+
+Use `os.path.expanduser("~") or Path.home() from pathlib.`
 
 Example:
 
@@ -40,7 +44,7 @@ os.path.expanduser("~")
 from pathlib import Path; Path.home()
 ```
 
-Использовать os.path.expanduser("~") или Path.home() из pathlib.
+Использовать `os.path.expanduser("~")` или `Path.home()` из `pathlib`.
 
 Пример:
 
@@ -50,7 +54,9 @@ os.path.expanduser("~")
 from pathlib import Path; Path.home()
 ```
 
-**What are the built-in types available in Python?**
+---
+
+**3. What are the built-in types available in Python?**
 
 Immutable types:
 
@@ -70,7 +76,9 @@ Mutable types:
 
 - list, dict, set, bytearray, memoryview
 
-**How to find bugs or perform static analysis in a Python application?**
+---
+
+**4. How to find bugs or perform static analysis in a Python application?**
 
 Use linters and type checkers: ruff / flake8 / pylint for code issues and style, mypy or pyright for static type analysis.  
 Use formatters like black and import sorting (isort or ruff format) to keep consistency. Also use security/static scanners  
