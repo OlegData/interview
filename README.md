@@ -1,6 +1,6 @@
 # Interview questions
 
-- [Database](./Database.md.md)
+- [Database](./Database.md)
 - [Flask](./Flask.md)
 - [MySql](./MySql.md)
 - [Postgres](./Postgres.md)
@@ -8,5 +8,6 @@
 - [ReactJS](./ReactJS.md)
 - [React_Redux](./React_Redux.md)
 - [React_Testing](./React_Testing.md)
+- [SOLID](./SOLID.md)
 - [SQLAlchemy](./SQLAlchemy.md)
 - [TypeScript](./TypeScript.md)
