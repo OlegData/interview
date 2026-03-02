@@ -379,17 +379,15 @@ In modern React, **stateless** components are usually functional components that
 
 **Stateless** components are simpler, easier to test, and more predictable because their output depends only on input props.
 
-**Stateless** компоненты — это компоненты, которые не управляют собственным состоянием. Они получают данные через props и отображают интерфейс только на их основе.  
-Они не используют this.state (в классах) или useState (в функциях).
-В современном React **stateless** компоненты обычно являются функциональными компонентами, которые просто возвращают JSX без управления внутренним состоянием или побочными эффектами.
-
-**Stateless**компоненты проще, легче тестируются и более предсказуемы, так как их результат зависит только от входных props.
-
 ```
 function StatelessComponent({ message }) {
   return <div>{message}</div>;
 }
 ```
+
+**Stateless** компоненты — это компоненты, которые не управляют собственным состоянием. Они получают данные через props и отображают интерфейс только на их основе. Они не используют this.state (в классах) или useState (в функциях). В современном React **stateless** компоненты обычно являются функциональными компонентами, которые просто возвращают JSX без управления внутренним состоянием или побочными эффектами.
+
+**Stateless** компоненты проще, легче тестируются и более предсказуемы, так как их результат зависит только от входных props.
 
 **21. What are stateful components?**
 
@@ -398,12 +396,6 @@ function StatelessComponent({ message }) {
 In class components, state is managed using this.state and this.setState. In functional components, state is managed using Hooks such as useState and useReducer.
 
 **Stateful** components are used when a component needs to handle dynamic data, user interactions, or side effects.
-
-**Stateful** компоненты — это компоненты, которые управляют собственным состоянием. Они хранят данные внутри себя и обновляют их со временем, что вызывает повторный рендер при изменении состояния.
-
-В классовых компонентах состояние управляется через this.state и this.setState. В функциональных компонентах состояние управляется с помощью хуков, таких как useState и useReducer.
-
-**Stateful** компоненты используются, когда компоненту нужно обрабатывать динамические данные, действия пользователя или побочные эффекты.
 
 ```
 function StatefulComponent() {
@@ -418,10 +410,15 @@ function StatefulComponent() {
 }
 ```
 
-**22. What are the recommended ways for type checking of React component props?**
-The recommended ways for type checking React component props are **TypeScript** and **PropTypes.**
+**Stateful** компоненты — это компоненты, которые управляют собственным состоянием. Они хранят данные внутри себя и обновляют их со временем, что вызывает повторный рендер при изменении состояния.
 
-**TypeScript** is the most recommended approach in modern React development. It provides static type checking at compile time, improves developer experience, catches errors early, and offers better scalability for large applications.
+В классовых компонентах состояние управляется через this.state и this.setState. В функциональных компонентах состояние управляется с помощью хуков, таких как useState и useReducer.
+
+**Stateful** компоненты используются, когда компоненту нужно обрабатывать динамические данные, действия пользователя или побочные эффекты.
+
+**22. What are the recommended ways for type checking of React component props?**
+
+The recommended ways for type checking React component props are **TypeScript** and **PropTypes**. **TypeScript** is the most recommended approach in modern React development. It provides static type checking at compile time, improves developer experience, catches errors early, and offers better scalability for large applications.
 
 ```
 interface MyComponentProps {
@@ -465,8 +462,7 @@ In modern projects, TypeScript is preferred, while **PropTypes** is mainly used 
 
 **23. Why does React recommend against mutating state?**
 
-React recommends against **mutating state** because it relies on reference comparison to detect changes.  
-If you mutate state directly, the reference may stay the same, and React may not detect the update, which can prevent re-rendering.
+React recommends against **mutating state** because it relies on reference comparison to detect changes. If you mutate state directly, the reference may stay the same, and React may not detect the update, which can prevent re-rendering.
 
 **Immutability** ensures predictable state updates, easier debugging, better performance optimization  
 (e.g., with PureComponent or React.memo), and compatibility with React’s reconciliation process.
@@ -476,8 +472,7 @@ Instead of **mutating state**, you should create a new object or array when upda
 React не рекомендует изменять (**мутировать**) state напрямую, потому что он использует сравнение ссылок для определения изменений.  
 Если изменить объект напрямую, ссылка может остаться прежней, и React не обнаружит обновление, что может привести к отсутствию перерендеринга.
 
-Неизменяемость (**immutability**) обеспечивает предсказуемость обновлений состояния, упрощает отладку, улучшает оптимизацию производительности  
-(например, с PureComponent или React.memo) и корректную работу механизма reconciliation.
+Неизменяемость (**immutability**) обеспечивает предсказуемость обновлений состояния, упрощает отладку, улучшает оптимизацию производительности (например, с PureComponent или React.memo) и корректную работу механизма reconciliation.
 
 Вместо мутации состояния следует создавать новый объект или массив при обновлении.
 
@@ -499,6 +494,7 @@ Overall, hooks make components more flexible, maintainable, and reusable.
 В целом хуки делают компоненты более гибкими, поддерживаемыми и переиспользуемыми.
 
 **25. What are the rules of React hooks?**
+
 The rules of React Hooks are:
 
 - Only call hooks at the top level. Do not call hooks inside loops, conditions, or nested functions. This ensures that hooks are called in the same order on every render.
@@ -555,6 +551,7 @@ function Example() {
 В большинстве случаев предпочтительно использовать useEffect. **useLayoutEffect** применяется только когда требуется работа с layout или немедленные визуальные изменения DOM.
 
 **27. What does the dependency array of useEffect affect?**
+
 The **dependency array of useEffect** controls when the effect runs.
 
 If the dependency array is empty ([]), the effect runs only once after the initial render.
@@ -601,12 +598,12 @@ function TextInputWithFocusButton() {
 
 В отличие от state, обновление **useRef** не вызывает перерендер. Его следует использовать, когда нужно сохранить значение или ссылку, не влияющую напрямую на отображение интерфейса.
 
-**29. What is the purpose of callback function argument format of setState() in React class components and when should it be used?**
-The callback function argument format of setState() is used to update state based on the previous state or props. Instead of passing an object, you pass a function:
-**setState((prevState, props) => newState).**
+---
 
-It should be used when the new state depends on the previous state, because state updates in React are asynchronous and may be batched.  
-Using the functional form ensures you always receive the latest state value and avoid bugs caused by stale data.
+**29. What is the purpose of callback function argument format of setState() in React class components and when should it be used?**
+
+The callback function argument format of setState() is used to update state based on the previous state or props. Instead of passing an object, you pass a function:
+**setState((prevState, props) => newState).** It should be used when the new state depends on the previous state, because state updates in React are asynchronous and may be batched. Using the functional form ensures you always receive the latest state value and avoid bugs caused by stale data.
 
 ```
 this.setState((prevState, props) => ({
@@ -616,13 +613,10 @@ this.setState((prevState, props) => ({
 
 The second callback argument of setState (setState(updater, callback)) can also be used to run code after the state has been updated and the component has re-rendered.
 
+<br>
+
 Функциональный формат аргумента setState() используется для обновления состояния на основе предыдущего state или props. Вместо объекта передаётся функция:
-**setState((prevState, props) => newState).**
-
-Его следует использовать, когда новое состояние зависит от предыдущего, потому что обновления состояния в React асинхронны и могут объединяться (batching).  
-Функциональный формат гарантирует получение актуального значения state и предотвращает ошибки из-за устаревших данных.
-
-Второй аргумент setState (setState(updater, callback)) можно использовать для выполнения кода после обновления состояния и завершения перерендеринга компонента.
+**setState((prevState, props) => newState).** Его следует использовать, когда новое состояние зависит от предыдущего, потому что обновления состояния в React асинхронны и могут объединяться (batching). Функциональный формат гарантирует получение актуального значения state и предотвращает ошибки из-за устаревших данных. Второй аргумент setState (setState(updater, callback)) можно использовать для выполнения кода после обновления состояния и завершения перерендеринга компонента.
 
 **30. What is the useCallback hook in React and when should it be used?**
 
