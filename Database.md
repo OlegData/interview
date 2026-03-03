@@ -85,20 +85,20 @@ user_id int REFERENCES users(id)
 );
 ```
 
-Key difference:
+**Key difference**:
 
-**Primary Key identifies a record in its own table.**
+Primary Key identifies a record in its own table.
 
-**Foreign Key links a record to another table.**
+Foreign Key links a record to another table.
 
-Primary Key (первичный ключ) — уникально идентифицирует строку в таблице.
+**Primary Key (первичный ключ)** — уникально идентифицирует строку в таблице.
 **Должен быть уникальным**
 
 **Не может быть NULL**
 
 **В таблице только один PK (может быть составным)**
 
-Foreign Key (внешний ключ) — ссылается на первичный ключ другой таблицы.
+**Foreign Key** (внешний ключ) — ссылается на первичный ключ другой таблицы.
 
 **Обеспечивает целостность данных**
 
@@ -106,11 +106,11 @@ Foreign Key (внешний ключ) — ссылается на первичн
 
 **Может быть NULL (если не запрещено)**
 
-Главное отличие:
+**Главное отличие:**
 
-**Primary Key — идентификатор записи в своей таблице.**
+Primary Key — идентификатор записи в своей таблице.
 
-**Foreign Key — связь между таблицами.**
+Foreign Key — связь между таблицами.
 
 ---
 
@@ -118,11 +118,11 @@ Foreign Key (внешний ключ) — ссылается на первичн
 
 CRUD stands for Create, Read, Update, Delete — the four basic operations performed on data in a database or application.
 
-In SQL:
+**In SQL**:
 
-Create — add new data `INSERT INTO users (name) VALUES ('John');`
+**Create** — add new data `INSERT INTO users (name) VALUES ('John');`
 
-Read — retrieve data `SELECT \* FROM users;`
+**Read** — retrieve data `SELECT \* FROM users;`
 
 Update — modify existing data `UPDATE users SET name = 'Jane' WHERE id = 1;`
 
