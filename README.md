@@ -1,6 +1,9 @@
 # Interview questions
 
+- [AWS](./AWS.md)
 - [Database](./Database.md)
+- [Docker](./Docker.md)
+- [FastApi](./FastApi.md)
 - [Flask](./Flask.md)
 - [MySql](./MySql.md)
 - [Postgres](./Postgres.md)
