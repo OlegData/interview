@@ -6,7 +6,7 @@
 
 Docker is a containerization platform that allows you to package an application and its dependencies into a lightweight, portable container. Containers share the host OS kernel but run in isolated environments, which makes them faster and more efficient than virtual machines. Docker ensures consistency across environments (development, staging, production) and simplifies deployment and scaling. It uses Docker images (immutable templates) to create containers, and Dockerfiles to define how images are built.
 
-Docker — это платформа контейнеризации, которая позволяет упаковать приложение и его зависимости в лёгкий переносимый контейнер. Контейнеры используют общее ядро ОС, но работают в изолированной среде, поэтому они быстрее и легче виртуальных машин. Docker обеспечивает одинаковую среду в development, taging и production и упрощает деплой и масштабирование. Он использует Docker images (неизменяемые шаблоны) для создания контейнеров и Dockerfile для описания процесса сборки образа.
+Docker — это платформа контейнеризации, которая позволяет упаковать приложение и его зависимости в лёгкий переносимый контейнер. Контейнеры используют общее ядро ОС, но работают в изолированной среде, поэтому они быстрее и легче виртуальных машин. Docker обеспечивает одинаковую среду в development, staging и production и упрощает деплой и масштабирование. Он использует Docker images (неизменяемые шаблоны) для создания контейнеров и Dockerfile для описания процесса сборки образа.
 
 **2. What do you understand about containers?**
 

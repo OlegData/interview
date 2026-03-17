@@ -4,25 +4,18 @@
 
 ---
 
-Python is a high-level, interpreted, dynamically typed programming language focused on readability and simplicity. It supports multiple paradigms  
-(OOP, procedural, functional) and has a large standard library and ecosystem.
-
-Benefits: clean and readable syntax, fast development speed, huge community and libraries, cross-platform support, strong ecosystem for web,  
-data science, automation, and scripting.
+Python is a high-level, interpreted, dynamically typed programming language focused on readability and simplicity. It supports multiple paradigms.
 
 PEP 8 is the official style guide for Python code. It defines naming conventions (snake_case for functions/variables, PascalCase for classes),  
 indentation (4 spaces), line length limits, import ordering, spacing rules, and general formatting standards to keep code consistent and readable.
 
 Python — это высокоуровневый, интерпретируемый, динамически типизированный язык программирования с акцентом на читаемость и простоту. Поддерживает  
-несколько парадигм (ООП, процедурную, функциональную) и имеет большую стандартную библиотеку.
-
-Преимущества: простой и понятный синтаксис, высокая скорость разработки, большое сообщество и экосистема библиотек, кроссплатформенность, сильные  
-позиции в веб-разработке, data science и автоматизации.
+несколько парадигм.
 
 PEP 8 — это официальный гайд по стилю кода Python. Он определяет соглашения по именованию (snake_case для функций и переменных, PascalCase для классов),  
 отступы (4 пробела), длину строки, порядок импортов, правила пробелов и общий стиль для поддержания читаемости и единообразия кода.
 
-**2. What’s the process to get the home directory using ‘~’ in Python?**
+**2. What's the process to get the home directory using '~' in Python?**
 
 ---
 
@@ -30,17 +23,18 @@ Use `os.path.expanduser("~") or Path.home() from pathlib.`
 
 Example:
 
-```
+```python
 os.path.expanduser("~")
 
 from pathlib import Path; Path.home()
+
 ```
 
 Использовать `os.path.expanduser("~")` или `Path.home()` из `pathlib`.
 
 Пример:
 
-```
+```python
 os.path.expanduser("~")
 
 from pathlib import Path; Path.home()
@@ -50,49 +44,32 @@ from pathlib import Path; Path.home()
 
 ---
 
-Immutable types:
+Immutable types: - int, float, complex, bool, str, tuple, range, frozenset, bytes, NoneType
 
-- int, float, complex, bool, str, tuple, range, frozenset, bytes, NoneType
-
-Mutable types:
-
-- list, dict, set, bytearray, memoryview
+Mutable types: - list, dict, set, bytearray, memoryview
 
 Да, на интервью лучше делить на изменяемые и неизменяемые.
 
-Неизменяемые (immutable):
+Неизменяемые (immutable): - int, float, complex, bool, str, tuple, range, frozenset, bytes, NoneType
 
-- int, float, complex, bool, str, tuple, range, frozenset, bytes, NoneType
-
-Изменяемые (mutable):
-
-- list, dict, set, bytearray, memoryview
+Изменяемые (mutable): - list, dict, set, bytearray, memoryview
 
 **4. What is the principal difference between a list and a tuple?**
 
 ---
 
-The main difference is mutability: a list is mutable (can be changed after creation), while a tuple is immutable  
-(cannot be modified).
+The main difference is mutability: a list is mutable, while a tuple is immutable. Tuples are generally faster and can be used as dictionary keys , while lists cannot.
+Lists use [], tuples use parentheses - ().
 
-Lists use [], tuples use (). Tuples are generally faster and can be used as dictionary keys (if they contain only  
-immutable elements), while lists cannot.
-
-Главное различие — изменяемость: list изменяемый (можно менять элементы), tuple неизменяемый (нельзя изменить  
-после создания).
-
-List создаётся через [], tuple — через (). Tuple обычно быстрее и может использоваться как ключ словаря (если  
-содержит только immutable элементы), list — нет.
+Главное различие — изменяемость: list изменяемый, tuple неизменяемый. Tuple обычно быстрее и может использоваться как ключ словаря, list — нет. List создаётся через [], tuple — через ().
 
 **5. How does Python handle memory management?**
 
 ---
 
 Python uses automatic memory management with reference counting and a garbage collector.
-
 Each object has a reference counter; when it drops to zero, the memory is released immediately.  
-To handle circular references, Python also uses a cyclic garbage collector that detects and frees  
-objects involved in reference cycles.
+To handle circular references, Python also uses a cyclic garbage collector that detects and frees objects involved in reference cycles.
 
 Additionally, Python has a private heap for object allocation managed by the Python memory manager.
 
@@ -108,29 +85,21 @@ Python использует автоматическое управление п
 
 ---
 
-lambda creates an anonymous function in a single expression and is limited to one expression  
-(no statements). It’s typically used for short, simple functions (e.g., in map, filter, sorted).
-
-def defines a named function, can contain multiple statements, annotations, docstrings, and complex logic.  
-It’s used for full-featured functions.
+lambda creates an anonymous function in a single expression and is limited to one expression . It's typically used for short, simple functions.
+def defines a named function, can contain multiple statements, annotations, docstrings, and complex logic.
 
 lambda — это анонимная функция из одного выражения (только expression, без операторов). Обычно  
 используется для коротких простых функций.
-
 def — именованная функция, может содержать несколько операторов, аннотации, docstring и сложную  
-логику. Используется для полноценных функций.
+логику.
 
 **7. What is a built-in function that Python uses to iterate over a number sequence?**
 
 ---
 
-The built-in function is range(). It generates a sequence of numbers and is commonly used in for loops.
+The built-in function is range(). It generates a sequence of numbers and is commonly used in for loops. Example: for i in range(5):
 
-Example: for i in range(5):
-
-Встроенная функция — range(). Она создаёт числовую последовательность и обычно используется в цикле for.
-
-Пример: for i in range(5):
+Встроенная функция — range(). Она создаёт числовую последовательность и обычно используется в цикле for. Пример: for i in range(5):
 
 **8. What are the optional statements possible inside a try-except block in Python?**
 
@@ -155,27 +124,18 @@ The optional clauses inside a try block are else and finally.
 A string in Python is an immutable sequence of Unicode characters used to represent text.  
 It is defined using single quotes, double quotes, or triple quotes for multi-line strings.
 
-Strings support indexing, slicing, and many built-in methods for manipulation.
-
 Строка в Python — это неизменяемая последовательность Unicode-символов, используемая для  
 представления текста. Она создаётся с помощью одинарных, двойных или тройных кавычек  
 (для многострочных строк).
-
-Строки поддерживают индексацию, срезы и множество встроенных методов для работы с текстом.
 
 **10. What is slicing in Python?**
 
 ---
 
-Slicing is a way to extract a portion of a sequence (like a list, tuple, or string) using  
-the syntax sequence[start:stop:step].
-start is inclusive, stop is exclusive, and step defines the interval.
-
+Slicing is a way to extract a portion of a sequence using the syntax sequence[start:stop:step]. start is inclusive, stop is exclusive, and step defines the interval.
 Example: my_list[1:4]
 
-Срез (slicing) — это способ получить часть последовательности (list, tuple, string) с помощью  
-синтаксиса sequence[start:stop:step].
-start включается, stop не включается, step задаёт шаг.
+Срез (slicing) — это способ получить часть последовательности с помощью синтаксиса sequence[start:stop:step]. start включается, stop не включается, step задаёт шаг.
 
 **11. What is Docstring in Python?**
 
@@ -193,80 +153,50 @@ Docstring — это строка документации для модуля, 
 
 ---
 
-A function in Python is a reusable block of code that performs a specific task. It is defined  
-using the def keyword, can accept parameters, and may return a value using return.
-
+A function in Python is a reusable block of code that performs a specific task. It is defined using the def keyword, can accept parameters, and may return a value using return.
 Functions help organize code, improve readability, and promote reusability.
 
 Функция в Python — это переиспользуемый блок кода, который выполняет определённую задачу. Она  
 определяется с помощью def, может принимать параметры и возвращать значение через return.
-
 Функции помогают структурировать код, повышают читаемость и обеспечивают переиспользуемость.
 
 **13. What is the return keyword used in Python?**
 
 ---
 
-The return keyword is used to exit a function and send a value back to the caller. When return  
-is executed, the function stops immediately. If no value is specified, the function returns None  
+The return keyword is used to exit a function and send a value back to the caller. When return is executed, the function stops immediately. If no value is specified, the function returns None  
 by default.
 
 return используется для выхода из функции и возврата значения вызывающему коду. При выполнении  
 return функция сразу прекращает работу. Если значение не указано, по умолчанию возвращается None.
 
-**14. What is “Call by Value” in Python?**
+**14. What is "Call by Value" in Python?**
 
 ---
 
-Python does not use pure call by value or call by reference — it uses call by object reference  
-(also called call by assignment).
-
-When a function is called, the reference to the object is passed.
-If the object is immutable, it behaves like call by value (you can’t modify the original).
+Python does not use pure call by value or call by reference — it uses call by object reference.
+When a function is called, the reference to the object is passed. If the object is immutable, it behaves like call by value.
 If the object is mutable, changes inside the function can affect the original object.
 
-В Python нет чистого call by value или call by reference — используется call by object reference  
-(call by assignment).
-
-В функцию передаётся ссылка на объект.
-Если объект неизменяемый — поведение похоже на call by value.
+В Python нет чистого call by value или call by reference — используется call by object reference. В функцию передаётся ссылка на объект. Если объект неизменяемый — поведение похоже на call by value.
 Если изменяемый — изменения внутри функции могут повлиять на оригинальный объект.
 
-**15. What is “Call by Reference” in Python?**
+**15. What is the purpose of the id() function in Python?**
 
 ---
 
-Python does not support true call by reference. It uses call by object reference (call by assignment).
-
-The function receives a reference to the object, but you cannot rebind the caller’s variable. You can  
-modify the object if it’s mutable, but reassignment inside the function does not affect the original  
-variable.
-
-В Python нет настоящего call by reference. Используется call by object reference (call by assignment).
-
-Функция получает ссылку на объект, но нельзя изменить саму переменную у вызывающей стороны. Можно  
-изменить объект, если он изменяемый, но переназначение внутри функции не меняет исходную переменную.
-
-**16. What is the purpose of the id() function in Python?**
-
----
-
-The id() function returns the unique identity of an object. In CPython, it represents the memory address  
-where the object is stored. It is often used to check whether two variables reference the same object.
+The id() function returns the unique identity of an object. In CPython, it represents the memory address where the object is stored. It is often used to check whether two variables reference the same object.
 
 Функция id() возвращает уникальный идентификатор объекта. В CPython это обычно адрес памяти объекта.  
 Используется для проверки, ссылаются ли две переменные на один и тот же объект.
 
-**17. How is the Python thread safe?**
+**15. How is the Python thread safe?**
 
 ---
 
-In CPython, thread safety is mainly ensured by the GIL (Global Interpreter Lock), which allows only one  
-thread to execute Python bytecode at a time. This prevents race conditions at the interpreter level for  
-memory management.
+In CPython, thread safety is mainly ensured by the GIL (Global Interpreter Lock), which allows only one thread to execute Python bytecode at a time. This prevents race conditions at the interpreter level for memory management.
 
-However, it does not make your application logic automatically thread-safe. For shared mutable data, you  
-still need synchronization primitives like Lock, RLock, Semaphore, etc., from the threading module.
+However, it does not make your application logic automatically thread-safe. For shared mutable data, you still need synchronization primitives like Lock, RLock, Semaphore, etc., from the threading module.
 
 В CPython потокобезопасность обеспечивается в основном за счёт GIL (Global Interpreter Lock), который  
 позволяет выполнять байткод только одному потоку одновременно. Это защищает управление памятью на уровне  
@@ -275,100 +205,74 @@ still need synchronization primitives like Lock, RLock, Semaphore, etc., from th
 Но это не делает логику программы автоматически потокобезопасной. При работе с общими изменяемыми данными  
 нужно использовать примитивы синхронизации (Lock, RLock, Semaphore и т.д.) из модуля threading.
 
-**18. What is a tuple in Python?**
+**16. What is a tuple in Python?**
 
 ---
 
-A tuple in Python is an immutable ordered collection of elements. It can store different data types  
-and allows indexing and slicing. Tuples are defined using parentheses () or by separating values with commas.
-
-Because they are immutable, tuples can be used as dictionary keys (if all elements are immutable).
+A tuple in Python is an immutable ordered collection of elements. It can store different data types and allows indexing and slicing. Tuples are defined using parentheses () or by separating values with commas.
 
 Tuple в Python — это неизменяемая упорядоченная коллекция элементов. Она может содержать разные типы  
 данных и поддерживает индексацию и срезы. Создаётся с помощью () или просто через запятые.
 
-Так как tuple неизменяемый, его можно использовать как ключ словаря (если все элементы тоже immutable).
-
-**19. What is a dictionary in Python programming?**
+**17. What is a dictionary in Python programming?**
 
 ---
 
-A dictionary in Python is a built-in mutable mapping type that stores data as key–value pairs. Keys must  
-be unique and immutable, while values can be of any type. Dictionaries are defined using {}.
-
+A dictionary in Python is a built-in mutable mapping type that stores data as key–value pairs. Keys must be unique and immutable, while values can be of any type. Dictionaries are defined using {}.
 They provide fast lookup, insertion, and deletion by key.
 
 Dictionary в Python — это встроенный изменяемый тип отображения (mapping), который хранит данные в виде  
 пар ключ–значение. Ключи должны быть уникальными и неизменяемыми, значения могут быть любого типа.
 Создаётся с помощью {}.
-
 Обеспечивает быстрый доступ, добавление и удаление по ключу.
 
-**20. What is the set object in Python?**
+**18. What is the set object in Python?**
 
 ---
 
-A set in Python is a built-in mutable, unordered collection of unique elements. It does not allow duplicate  
-values and supports mathematical set operations like union, intersection, difference, and symmetric difference.
-
-Sets are created using {} (with elements) or the set() constructor.
+A set in Python is a built-in mutable, unordered collection of unique elements. It does not allow duplicate values and supports mathematical set operations like union, intersection, difference, and symmetric difference. Sets are created using {} (with elements) or the set() constructor.
 
 Set в Python — это встроенная изменяемая, неупорядоченная коллекция уникальных элементов. Дубликаты не  
 допускаются. Поддерживает операции множеств: объединение, пересечение, разность и симметрическую разность.
-
 Создаётся с помощью {} (с элементами) или конструктора set().
 
-**21. What is Class in Python?**
+**19. What is Class in Python?**
 
 ---
 
-A class in Python is a blueprint for creating objects. It defines attributes (data) and methods (functions)  
-that describe the behavior of the objects. A class is defined using the class keyword.
+A class in Python is a blueprint for creating objects. It defines attributes and methods that describe the behavior of the objects. A class is defined using the class keyword.
+Classes are the foundation of object-oriented programming in Python.
 
-Classes are the foundation of object-oriented programming (OOP) in Python.
-
-Класс в Python — это шаблон для создания объектов. Он определяет атрибуты (данные) и методы (функции),  
-которые описывают поведение объектов. Объявляется с помощью ключевого слова class.
-
+Класс в Python — это шаблон для создания объектов. Он определяет атрибуты и методы , которые описывают поведение объектов. Объявляется с помощью ключевого слова class.
 Классы — основа объектно-ориентированного программирования (ООП) в Python.
 
-**22. What are Attributes and Methods in a Python class?**
+**20. What are Attributes and Methods in a Python class?**
 
 ---
 
-Attributes are variables that belong to a class or its instances. They store the state or data of an object  
-(instance attributes and class attributes).
-
+Attributes are variables that belong to a class or its instances. They store the state or data of an object .
 Methods are functions defined inside a class that describe the behavior of its objects. They usually operate  
-on the object’s attributes and take self as the first parameter.
+on the object's attributes and take self as the first parameter.
 
-Атрибуты — это переменные, принадлежащие классу или его экземплярам. Они хранят состояние или данные объекта  
-(атрибуты экземпляра и атрибуты класса).
-
+Атрибуты — это переменные, принадлежащие классу или его экземплярам. Они хранят состояние или данные объекта.
 Методы — это функции, определённые внутри класса, которые описывают поведение объекта. Обычно они работают с  
 атрибутами и принимают self как первый параметр.
 
-**23. How to assign values for the Class attributes at runtime?**
+**21. How to assign values for the Class attributes at runtime?**
 
 ---
 
-You can assign class attributes at runtime either directly through the class or dynamically using setattr().
-
+You can assign class attributes at runtime either directly through the class or dynamically using setattr(). This changes the attribute for the class itself.
 Example:
 
 ```python
 MyClass.attribute = value
-
 setattr(MyClass, "attribute", value)
 ```
 
-This changes the attribute for the class itself (affects all instances unless overridden).
+Значения атрибутам класса во время выполнения можно присвоить напрямую через класс или через setattr(). Это изменяет атрибут на уровне класса.
 
-Значения атрибутам класса во время выполнения можно присвоить напрямую через класс или через setattr().
-
-Это изменяет атрибут на уровне класса (влияет на все экземпляры, если не переопределено в объекте).
-
-**24. What is Inheritance in Python programming?**
+**22. What is Inheritance in Python programming?**
 
 ---
 
@@ -377,121 +281,93 @@ and inherits its attributes and methods. It allows code reuse and extension of e
 
 It is defined by passing the parent class in parentheses: class Child(Parent):
 
-Наследование — это механизм ООП, при котором один класс (дочерний) наследует атрибуты и методы другого класса  
-(родительского). Это позволяет переиспользовать код и расширять функциональность.
-
+Наследование — это механизм ООП, при котором один класс наследует атрибуты и методы другого класса . Это позволяет переиспользовать код и расширять функциональность.
 Объявляется через указание родительского класса в скобках: class Child(Parent):
 
-**25. What is Composition in Python?**
+**23. What is Composition in Python?**
 
 ---
 
 Composition is an OOP concept where one class contains an instance of another class as an attribute, instead  
-of inheriting from it. It represents a “has-a” relationship and promotes flexibility and loose coupling.
+of inheriting from it. It represents a "has-a" relationship and promotes flexibility and loose coupling.
 
 Example: a Car class containing an Engine object.
 
 Композиция — это принцип ООП, при котором один класс содержит объект другого класса как атрибут, а не наследуется  
-от него. Это отношение типа “has-a” и даёт большую гибкость и слабую связанность.
+от него. Это отношение типа "has-a" и даёт большую гибкость и слабую связанность.
 
 Пример: класс Car, который содержит объект Engine.
 
-**26. What are Errors and Exceptions in Python programs?**
+**24. What are Errors and Exceptions in Python programs?**
 
 ---
 
-Errors are problems in a program that prevent it from running correctly. They can be syntax errors (detected before  
-execution) or runtime errors.
-
-Exceptions are runtime errors that occur during program execution and can be handled using try, except, else, and  
+**Errors** are problems in a program that prevent it from running correctly. They can be syntax errors or runtime errors.
+**Exceptions** are runtime errors that occur during program execution and can be handled using try, except, else, and  
 finally. Handling exceptions allows the program to continue running instead of crashing.
 
-Ошибки (Errors) — это проблемы в программе, которые мешают её корректному выполнению. Это могут быть синтаксические  
+**Ошибки** (Errors) — это проблемы в программе, которые мешают её корректному выполнению. Это могут быть синтаксические  
 ошибки или ошибки времени выполнения.
-
-Исключения (Exceptions) — это ошибки, возникающие во время выполнения программы, которые можно обработать с помощью  
+**Исключения** (Exceptions) — это ошибки, возникающие во время выполнения программы, которые можно обработать с помощью  
 try, except, else, finally. Обработка исключений позволяет программе не завершаться аварийно.
 
-**27. How do you raise exceptions for a predefined condition in Python?**
+**25. How do you raise exceptions for a predefined condition in Python?**
 
 ---
 
-You raise exceptions using the raise keyword with a specific exception class.
-
-Example:
-
-```python
-raise ValueError("Invalid input")
-```
-
-You can also define custom exceptions by inheriting from Exception.
+You raise exceptions using the raise keyword with a specific exception class. Example: `raise ValueError("Invalid input")` You can also define custom exceptions by inheriting from Exception.
 
 Исключения вызываются с помощью ключевого слова raise и указания класса исключения.
-
 Также можно создавать собственные исключения, наследуясь от Exception.
 
-**28. What are Python Iterators?**
+**26. What are Python Iterators?**
 
 ---
 
-Python iterators are objects that implement the iterator protocol: they have \_\iter\_\_() and \_\next\_\_() methods.  
-They produce items one at a time and raise StopIteration when no more items are available.
+Python **iterators** are objects that implement the iterator protocol: they have \_\iter\_\_() and \_\next\_\_() methods. They produce items one at a time and raise StopIteration when no more items are available. Iterators are used in loops like for and allow lazy iteration.
 
-Iterators are used in loops like for and allow lazy iteration (values are generated on demand).
+**Итераторы** в Python — это объекты, реализующие протокол итератора: методы \_\iter\_\_() и \_\next\_\_(). Они возвращают  
+элементы по одному и вызывают StopIteration, когда элементы заканчиваются. Используются в цикле for и позволяют ленивую (lazy) итерацию — значения создаются по мере необходимости.
 
-Итераторы в Python — это объекты, реализующие протокол итератора: методы \_\iter\_\_() и \_\next\_\_(). Они возвращают  
-элементы по одному и вызывают StopIteration, когда элементы заканчиваются.
-
-Используются в цикле for и позволяют ленивую (lazy) итерацию — значения создаются по мере необходимости.
-
-**29. What is the difference between an Iterator and an Iterable?**
+**27. What is the difference between an Iterator and an Iterable?**
 
 ---
 
-An Iterable is an object that can return an iterator. It implements the `__iter__`() method and can be used  
-in a for loop (e.g., list, tuple, string).
+An **Iterable** (list, tuple, string) is an object that can return an iterator. It implements the `__iter__`() method and can be used in a for loop.
 
-An Iterator is an object that actually produces the next value. It implements both `__iter__`() and `__next__`()  
-and keeps state during iteration.
+An **Iterator** is an object that actually produces the next value. It implements both `__iter__`() and `__next__`() and keeps state during iteration.
 
-Iterable можно перебирать — он реализует `__iter__`() и возвращает итератор (например, list, tuple, string).
+**Iterable** (list, tuple, string) можно перебирать — он реализует `__iter__`() и возвращает итератор.
 
-Iterator — это объект, который возвращает элементы по одному. Он реализует `__iter__`() и `__next__`() и хранит  
-состояние во время итерации.
+**Iterator** — это объект, который возвращает элементы по одному. Он реализует `__iter__`() и `__next__`() и хранит состояние во время итерации.
 
 **30. What are Python Generators?**
 
 ---
 
-Python generators are a special type of iterator that produce values lazily using the yield keyword.  
-Instead of returning all values at once, they generate them one by one and maintain their state between calls.
-
+Python **generators** are a special type of iterator that produce values lazily using the yield keyword. Instead of returning all values at once, they generate them one by one and maintain their state between calls.
 They are memory-efficient and commonly used for large datasets or infinite sequences.
 
-Генераторы в Python — это особый тип итераторов, которые создают значения лениво с помощью yield.  
-Они не возвращают все данные сразу, а генерируют их по одному и сохраняют своё состояние между вызовами.
-
+**Генераторы** в Python — это особый тип итераторов, которые создают значения лениво с помощью yield. Они не возвращают все данные сразу, а генерируют их по одному и сохраняют своё состояние между вызовами.
 Они экономят память и часто используются для больших наборов данных или бесконечных последовательностей.
 
 **31. What are metaclasses in Python, and when would you use them in your code?**
 
-Metaclasses in Python are classes that define how other classes are created. In Python, everything is an object, including classes. A metaclass controls the process of class creation (class construction). Normally, classes are created by the default metaclass type.
+**Metaclasses** in Python are classes that define how other classes are created. In Python, everything is an object, including classes. A metaclass controls the process of class creation. Normally, classes are created by the default metaclass type.
 
 Example:
 
 ```python
 class MyMeta(type):
-def _new__(cls, name, bases, attrs):
-print("Creating class:", name)
-return super()._new__(cls, name, bases, attrs)
+    def _new__(cls, name, bases, attrs):
+        print("Creating class:", name)
+        return super()._new__(cls, name, bases, attrs)
 
 class MyClass(metaclass=MyMeta):
-pass
+    pass
 ```
 
-When MyClass is defined, the metaclass intercepts and customizes its creation.
-
-Metaclasses are used when you need to modify or control class behavior automatically, for example:
+When MyClass is defined, the metaclass intercepts and customizes its creation. Metaclasses are used when you need to modify or control class behavior automatically, for example:
 
 - Enforcing coding rules in classes
 
@@ -670,9 +546,9 @@ GIL (Global Interpreter Lock) — это механизм в CPython, котор
 
 ---
 
-threading uses multiple threads within a single process. Threads share the same memory space but are limited by the GIL, so only one thread executes Python bytecode at a time.
+**threading** uses multiple threads within a single process. Threads share the same memory space but are limited by the GIL, so only one thread executes Python bytecode at a time.
 
-multiprocessing creates separate processes. Each process has its own Python interpreter and memory space, so it is not limited by the GIL and can run on multiple CPU cores.
+**multiprocessing** creates separate processes. Each process has its own Python interpreter and memory space, so it is not limited by the GIL and can run on multiple CPU cores.
 
 When to use them:
 
@@ -846,8 +722,8 @@ Path("folder") / "file.txt"
 
 ---
 
-Serialization is the process of converting a Python object into a format that can be stored or transmitted (file, network).
-Deserialization is the reverse process — converting that format back into a Python object.
+**Serialization** is the process of converting a Python object into a format that can be stored or transmitted (file, network).
+**Deserialization** is the reverse process — converting that format back into a Python object.
 
 Two common libraries are pickle and json.
 
@@ -888,7 +764,7 @@ json:
 
 ---
 
-The unittest library is Python’s built-in framework for writing and running automated tests. It helps verify that individual parts of the code (units such as functions or classes) work correctly. To write unit tests, you create a class that inherits from unittest.TestCase and define test methods that start with test\_. Inside these methods you call the code and check results using assertions like assertEqual, assertTrue, or assertRaises.
+The unittest library is Python's built-in framework for writing and running automated tests. It helps verify that individual parts of the code (units such as functions or classes) work correctly. To write unit tests, you create a class that inherits from unittest.TestCase and define test methods that start with test\_. Inside these methods you call the code and check results using assertions like assertEqual, assertTrue, or assertRaises.
 
 Example flow:
 
@@ -937,17 +813,10 @@ Mutable data types can be changed after they are created. Their content can be m
 Examples of mutable types: `list, dict, set, bytearray`
 Examples of immutable types: `int, float, str, tuple, frozenset, bytes`
 
-Example:
-A list can be modified: my_list.append(5) changes the same object. A string cannot be modified; operations like concatenation create a new string.
-
 Mutable типы данных можно изменять после создания. Их содержимое можно менять без создания нового объекта. Immutable типы данных нельзя изменить после создания. Любая «модификация» создаёт новый объект.
 
 Примеры mutable типов: `list, dict, set, bytearray`
 Примеры immutable типов: `int, float, str, tuple, frozenset, bytes`
-
-Пример:
-Список можно изменить: my_list.append(5) изменяет тот же объект.
-Строку изменить нельзя — операции вроде конкатенации создают новую строку.
 
 **44. How can you work with JSON data in Python, and what is the purpose of the json module?**
 
@@ -1001,7 +870,9 @@ Typical use cases:
 
 ---
 
-async and await are used to write asynchronous code that can run multiple tasks concurrently without blocking the program. async is used to define a coroutine function (async def). Such functions can be paused and resumed by the event loop. await is used inside an async function to pause execution until another coroutine or asynchronous operation finishes, while allowing other tasks to run.
+**async and await** are used to write asynchronous code that can run multiple tasks concurrently without blocking the program.
+**async** is used to define a coroutine function (async def). Such functions can be paused and resumed by the event loop.
+**await** is used inside an async function to pause execution until another coroutine or asynchronous operation finishes, while allowing other tasks to run.
 
 Purpose:
 
@@ -1046,9 +917,9 @@ await используется внутри async-функции и приост
 
 ---
 
-requests is a third-party library designed to make HTTP requests simple and readable. It provides a high-level API and handles many details automatically, such as encoding, sessions, cookies, and JSON parsing.
+**requests** is a third-party library designed to make HTTP requests simple and readable. It provides a high-level API and handles many details automatically, such as encoding, sessions, cookies, and JSON parsing.
 
-urllib is a built-in Python module for working with URLs and HTTP requests. It is more low-level and requires more code to perform the same tasks.
+**urllib** is a built-in Python module for working with URLs and HTTP requests. It is more low-level and requires more code to perform the same tasks.
 
 Key differences:
 
@@ -1090,7 +961,8 @@ urllib — встроенный модуль Python для работы с URL �
 
 ---
 
-The subprocess module is used to run external programs or system commands from a Python script and interact with them. It allows you to start processes, capture their output, pass input, and check exit codes. The most common function is subprocess.run(), which executes a command and waits for it to finish.
+The **subprocess module** is used to run external programs or system commands from a Python script and interact with them.
+It allows you to start processes, capture their output, pass input, and check exit codes. The most common function is subprocess.run(), which executes a command and waits for it to finish.
 
 Example uses:
 
@@ -1126,7 +998,7 @@ This runs the command, waits for completion, and allows access to the output.
 
 ---
 
-ap, filter, and reduce are functional programming tools used to process iterables like lists.
+map, filter, and reduce are functional programming tools used to process iterables like lists.
 
 map applies a function to each element of an iterable and returns a new iterator with the results.
 
@@ -1174,13 +1046,13 @@ reduce применяет функцию последовательно ко в�
 
 ---
 
-Memoization is caching function results so repeated calls with the same arguments return the stored result instead of recomputing.
+**Memoization** is caching function results so repeated calls with the same arguments return the stored result instead of recomputing.
 
 In Python, the common way is functools.lru_cache:
 
 - add @lru_cache(maxsize=None) to a recursive function
 
-Why it’s useful in recursion:
+Why it's useful in recursion:
 
 - avoids repeating the same subproblems
 
@@ -1258,7 +1130,8 @@ Type hints (PEP 484) позволяют указывать ожидаемые т
 
 ---
 
-Threads in Python are typically managed with the threading module: create a Thread with a target function, start it with .start(), and wait with .join(). For higher-level usage, concurrent.futures.ThreadPoolExecutor is often preferred.
+**Threads** in Python are typically managed with the threading module: create a Thread with a target function, start it with .start(), and wait with .join().
+For higher-level usage, concurrent.futures.ThreadPoolExecutor is often preferred.
 
 Common challenges:
 
@@ -1314,7 +1187,9 @@ Best practices:
 
 ---
 
-asyncio is a Python standard library module used for writing asynchronous, non-blocking code using async and await. It is built around an event loop that manages and schedules multiple tasks (coroutines) so they can run concurrently without creating multiple threads.
+**asyncio** is a Python standard library module used for writing asynchronous, non-blocking code using async and await.
+
+It is built around an event loop that manages and schedules multiple tasks (coroutines) so they can run concurrently without creating multiple threads.
 
 Purpose:
 
@@ -1376,7 +1251,9 @@ asyncio — это модуль стандартной библиотеки Pyth
 
 ---
 
-A coroutine in Python is a special type of function that can pause and resume its execution. It is defined using async def. Coroutines are used in asynchronous programming to allow multiple tasks to run concurrently without blocking the program. They work with the event loop and use await to pause execution until another asynchronous operation completes.
+A **coroutine** in Python is a special type of function that can pause and resume its execution.
+It is defined using async def. Coroutines are used in asynchronous programming to allow multiple tasks to run concurrently without blocking the program.
+They work with the event loop and use await to pause execution until another asynchronous operation completes.
 
 Purpose:
 
@@ -1396,7 +1273,9 @@ Purpose:
 
 ---
 
-A Future in concurrent.futures is an object that represents the result of a computation that may not have finished yet. When you submit a task to an executor (ThreadPoolExecutor or ProcessPoolExecutor), it immediately returns a Future. The task runs in the background, and the Future allows you to check its status or retrieve the result later.
+A **Future in concurrent.futures** is an object that represents the result of a computation that may not have finished yet.
+When you submit a task to an executor (ThreadPoolExecutor or ProcessPoolExecutor), it immediately returns a Future.
+The task runs in the background, and the Future allows you to check its status or retrieve the result later.
 
 Main uses:
 
@@ -1428,7 +1307,8 @@ Future в модуле concurrent.futures — это объект, которы�
 
 ---
 
-A graph in Python is usually represented using adjacency lists or adjacency matrices. The most common representation is an adjacency list, where each node stores a list of its neighbors. It is typically implemented using a dictionary.
+A **graph** in Python is usually represented using adjacency lists or adjacency matrices.
+The most common representation is an adjacency list, where each node stores a list of its neighbors. It is typically implemented using a dictionary.
 
 Example idea: `graph = { 'A': ['B', 'C'], 'B': ['A', 'D'], 'C': ['A'], 'D': ['B'] }`
 
@@ -1473,7 +1353,7 @@ Libraries like networkx can also be used for more complex graph operations.
 ---
 
 *args and \*\*kwargs allow a function to accept a variable number of arguments.
-*args collects positional arguments into a tuple. It is used when you don’t know how many positional parameters will be passed.
+*args collects positional arguments into a tuple. It is used when you don't know how many positional parameters will be passed.
 
 Example idea: `def func(*args):` You can iterate through args inside the function.
 
@@ -1899,7 +1779,7 @@ In modern Python (3.3+), packages can work without \_\_init\_\_.py, but it is st
 **69. What is the purpose of the if \_\_name\_\_ == "\_\_main\_\_": block in a Python script?**
 
 The if \_\_name\_\_ == "\_\_main\_\_: block ensures that certain code runs only when the script is executed directly, not when it is imported as a module.
-When a Python file runs directly, the special variable \_\_name\_\_ is set to "\_\_main\_\_". When the file is imported, \_\_name\_\_ is set to the module’s name.
+When a Python file runs directly, the special variable \_\_name\_\_ is set to "\_\_main\_\_". When the file is imported, \_\_name\_\_ is set to the module's name.
 
 Purpose:
 
@@ -2014,8 +1894,7 @@ Lambda-функция — это небольшая анонимная функ�
 **73. What are list comprehensions, and how do they work in Python?**
 
 --
-
-List comprehensions provide a compact way to create lists by applying an expression to each element of an iterable.
+A list comprehension is a short and elegant way to create a list in Python using a single line of code.
 Syntax idea: [expression for item in iterable if condition]
 
 How they work:
@@ -2148,7 +2027,8 @@ Typical use case: when a function needs to update a global state.
 
 ---
 
-A shallow copy creates a new object but copies only the references to the nested objects. If the nested objects are modified, the change will affect both copies. A deep copy creates a completely independent copy of the object and all objects inside it.
+A shallow copy creates a new object but copies only the references to the nested objects. If the nested objects are modified, the change will affect both copies.
+A deep copy creates a completely independent copy of the object and all objects inside it.
 
 Key difference:
 
@@ -2214,7 +2094,7 @@ Common examples: `@staticmethod`, `@classmethod`, `@property`
 
 ---
 
-The is operator is used to check object identity — whether two variables refer to the same object in memory. It does not compare values, but compares whether both variables point to the exact same object.
+The **is operator** is used to check object identity — whether two variables refer to the same object in memory. It does not compare values, but compares whether both variables point to the exact same object.
 
 Difference:
 
@@ -2238,7 +2118,7 @@ Typical use case: checking against None.
 
 ---
 
-The pass statement is a null operation in Python — it does nothing when executed. It is used as a placeholder where a statement is syntactically required but no action is needed yet.
+The **pass statement** is a null operation in Python — it does nothing when executed. It is used as a placeholder where a statement is syntactically required but no action is needed yet.
 
 Typical use cases:
 
@@ -2266,7 +2146,8 @@ Typical use cases:
 
 ---
 
-**break** and **continue** control the flow of loops. **break** immediately stops the loop and exits it, even if the loop condition is still true. **continue** skips the rest of the current iteration and moves to the next iteration of the loop.
+**break** and **continue** control the flow of loops. **break** immediately stops the loop and exits it, even if the loop condition is still true.
+**continue** skips the rest of the current iteration and moves to the next iteration of the loop.
 
 Key difference:
 
@@ -2288,7 +2169,8 @@ Key difference:
 
 **82. What is a generator in Python, and how is it different from a regular function?**
 
-A generator is a special type of function that returns an iterator and produces values one at a time using yield, instead of returning them all at once. Each time the generator is called, it resumes execution from where it stopped.
+A **generator** is a special type of function that returns an iterator and produces values one at a time using yield, instead of returning them all at once.
+Each time the generator is called, it resumes execution from where it stopped.
 
 Difference from a regular function:
 
@@ -2459,7 +2341,7 @@ Namespaces используются для организации и изоля�
 
 ---
 
-Scope resolution in Python defines how Python looks up variable names in different scopes.
+**Scope resolution** in Python defines how Python looks up variable names in different scopes.
 
 Python follows the LEGB rule:
 
@@ -2469,7 +2351,7 @@ Python follows the LEGB rule:
 
 - G — Global: variables defined at the module level
 
-- B — Built-in: names from Python’s built-in namespace
+- B — Built-in: names from Python's built-in namespace
 
 Python searches for a variable in this order: Local → Enclosing → Global → Built-in.
 
@@ -2609,9 +2491,9 @@ Purpose:
 
 ---
 
-Instance methods operate on a specific object of a class. They take self as the first parameter and can access or modify instance attributes.
-Class methods operate on the class itself rather than a specific object. They take cls as the first parameter and are defined using the @classmethod decorator.
-Static methods belong to the class but do not access instance or class data. They behave like regular functions placed inside a class and use the @staticmethod decorator.
+**Class methods** operate on the class itself rather than a specific object. They take cls as the first parameter and are defined using the @classmethod decorator.
+**Instance methods** operate on a specific object of a class. They take self as the first parameter and can access or modify instance attributes.
+**Static methods** belong to the class but do not access instance or class data. They behave like regular functions placed inside a class and use the @staticmethod decorator.
 
 Key differences:
 
@@ -2619,7 +2501,7 @@ Key differences:
 
 - class method → works with class-level data (cls)
 
-static method → utility method that doesn’t depend on class or instance state
+- static method → utility method that doesn't depend on class or instance state
 
 Instance methods работают с конкретным объектом класса. Они принимают self как первый параметр и могут изменять атрибуты объекта.
 Class methods работают с самим классом, а не с отдельным объектом. Они принимают cls как первый параметр и объявляются с помощью @classmethod.
@@ -2670,7 +2552,7 @@ Purpose:
 
 ---
 
-super() is used to call methods from a parent (base) class inside a child class. It allows a subclass to reuse and extend the functionality of the parent class. It is most commonly used to call the parent class constructor (\_\_init\_\_) when creating a subclass.
+**super()** is used to call methods from a parent (base) class inside a child class. It allows a subclass to reuse and extend the functionality of the parent class. It is most commonly used to call the parent class constructor (\_\_init\_\_) when creating a subclass.
 
 Purpose:
 
@@ -2694,7 +2576,7 @@ super() используется для вызова методов родите
 
 ---
 
-Magic methods (also called dunder methods) are special methods in Python that start and end with double underscores, such as \_\_init\_\_, \_\str\_\_, or \_\add\_\_.
+**Magic methods** (also called dunder methods) are special methods in Python that start and end with double underscores, such as \_\_init\_\_, \_\str\_\_, or \_\add\_\_.
 
 They allow developers to define how objects behave with built-in operations and syntax.
 
@@ -2710,11 +2592,11 @@ Examples:
 
 Purpose:
 
-customize object behavior
+- customize object behavior
 
-enable operator overloading
+- enable operator overloading
 
-integrate objects with Python’s built-in functions
+- integrate objects with Python's built-in functions
 
 Магические методы (или dunder methods) — это специальные методы в Python, которые начинаются и заканчиваются двойным подчёркиванием, например \_\_init\_\_, \_\str\_\_, \_\add\_\_.
 
@@ -2749,9 +2631,9 @@ Override \_\_init_subclass\_\_ in the class and raise an error if someone tries 
 
 Purpose:
 
-restrict subclassing
+- restrict subclassing
 
-enforce design rules in frameworks or libraries
+- enforce design rules in frameworks or libraries
 
 В Python нет встроенного механизма, который полностью запрещает наследование, но его можно контролировать через \_\_init_subclass\_\_() или выбрасывая исключение при попытке наследования.
 
@@ -2804,8 +2686,7 @@ Example idea: testing that a function returns the correct result.
 
 ---
 
-pytest is a popular third-party testing framework for Python used to write and run automated tests.
-It is simpler and more flexible than unittest, and allows writing tests as plain functions without creating classes.
+**pytest** is a popular third-party testing framework for Python used to write and run automated tests. It is simpler and more flexible than unittest, and allows writing tests as plain functions without creating classes.
 
 How it is used:
 
@@ -2890,7 +2771,7 @@ Messages in Python are logged using the logging module. You import logging, conf
 
 ---
 
-Assertions in Python are used to check that a condition is true during program execution. They are written with the assert statement. If the condition is false, Python raises an AssertionError.
+**Assertions** in Python are used to check that a condition is true during program execution. They are written with the assert statement. If the condition is false, Python raises an AssertionError.
 
 Example: `assert x > 0`, "x must be positive"
 
@@ -2902,7 +2783,7 @@ Example: `assert x > 0`, "x must be positive"
 
 ---
 
-A traceback is an error report in Python that shows the sequence of function calls that led to an exception. It includes the file names, line numbers, and the exact error message. To analyze it, you usually read it from the bottom up to identify the type of error and the line of code where it occurred.
+**A traceback** is an error report in Python that shows the sequence of function calls that led to an exception. It includes the file names, line numbers, and the exact error message. To analyze it, you usually read it from the bottom up to identify the type of error and the line of code where it occurred.
 
 Traceback в Python — это отчет об ошибке, который показывает последовательность вызовов функций, приведших к исключению. Он содержит имена файлов, номера строк и точное сообщение об ошибке. Чтобы его проанализировать, обычно читают его снизу вверх, чтобы определить тип ошибки и строку кода, где она произошла.
 
@@ -2910,15 +2791,15 @@ Traceback в Python — это отчет об ошибке, который по
 
 ---
 
-typing.Protocol is a way to define an interface by required methods/attributes (structural typing, “duck typing”). A class matches the protocol if it has the right members, even without inheriting from it. It’s better than ABC/inheritance when you want flexible plugin-style APIs, to accept third-party classes you can’t modify, or to avoid forcing a shared base class just for typing.
+**typing.Protocol** is a way to define an interface by required methods/attributes (structural typing, "duck typing"). A class matches the protocol if it has the right members, even without inheriting from it. It's better than ABC/inheritance when you want flexible plugin-style APIs, to accept third-party classes you can't modify, or to avoid forcing a shared base class just for typing.
 
-typing.Protocol — это способ описать интерфейс через набор обязательных методов/атрибутов (структурная типизация, “duck typing”). Класс соответствует протоколу, если у него есть нужные члены, даже без наследования. Это лучше, чем ABC/наследование, когда нужна гибкость (плагинные API), нужно принимать сторонние классы, которые нельзя менять, или не хочется навязывать общий базовый класс только ради типизации.
+typing.Protocol — это способ описать интерфейс через набор обязательных методов/атрибутов (структурная типизация, "duck typing"). Класс соответствует протоколу, если у него есть нужные члены, даже без наследования. Это лучше, чем ABC/наследование, когда нужна гибкость (плагинные API), нужно принимать сторонние классы, которые нельзя менять, или не хочется навязывать общий базовый класс только ради типизации.
 
 **103. What are TypeVar and Generic? Explain covariance and contravariance and when they are needed.**
 
 ---
 
-TypeVar is used to declare a type variable that can represent different types. Generic is used to create classes or functions that operate on those type variables, allowing type-safe reusable code. Covariance means that a generic type can use a more specific type than originally declared. For example, if Cat is a subtype of Animal, then Box[Cat] can be treated as Box[Animal]. It is used when the type is only returned (read-only). Contravariance means that a generic type can accept a more general type. If Cat is a subtype of Animal, then Handler[Animal] can be used where Handler[Cat] is expected. It is used when the type is only consumed (used as input).
+**TypeVar** is used to declare a type variable that can represent different types. **Generic** is used to create classes or functions that operate on those type variables, allowing type-safe reusable code. Covariance means that a generic type can use a more specific type than originally declared. For example, if Cat is a subtype of Animal, then Box[Cat] can be treated as Box[Animal]. It is used when the type is only returned (read-only). Contravariance means that a generic type can accept a more general type. If Cat is a subtype of Animal, then Handler[Animal] can be used where Handler[Cat] is expected. It is used when the type is only consumed (used as input).
 
 TypeVar используется для объявления переменной типа, которая может представлять разные типы. Generic используется для создания классов или функций, работающих с такими переменными типов, что позволяет писать безопасный и переиспользуемый код. Ковариантность означает, что обобщенный тип может использовать более конкретный тип. Например, если Cat — подтип Animal, то Box[Cat] можно рассматривать как Box[Animal]. Это используется, когда тип только возвращается (только чтение).
 Контравариантность означает, что обобщенный тип может принимать более общий тип. Если Cat — подтип Animal, то Handler[Animal] можно использовать там, где ожидается Handler[Cat]. Это используется, когда тип используется только как входной параметр.
@@ -2927,7 +2808,7 @@ TypeVar используется для объявления переменно�
 
 ---
 
-Use TypedDict when you want to type-check plain dict data (often JSON-like) with minimal overhead and no runtime validation. It’s best for static typing and interoperability with existing dicts. Use dataclass when you want a lightweight Python object with fields, defaults, and simple behavior; it’s great for internal domain models, but it doesn’t validate types at runtime by default. Use a Pydantic model when you need runtime parsing/validation/coercion (e.g., request/response schemas, config, external input), plus strong error messages and easy serialization.
+Use **TypedDict** when you want to type-check plain dict data (often JSON-like) with minimal overhead and no runtime validation. It's best for static typing and interoperability with existing dicts. Use dataclass when you want a lightweight Python object with fields, defaults, and simple behavior; it's great for internal domain models, but it doesn't validate types at runtime by default. Use a Pydantic model when you need runtime parsing/validation/coercion (e.g., request/response schemas, config, external input), plus strong error messages and easy serialization.
 
 TypedDict используйте, когда нужно типизировать обычные dict (часто JSON-подобные данные) с минимальными накладными расходами и без рантайм-валидации. Лучше всего подходит для статической типизации и работы с уже существующими словарями.
 dataclass используйте, когда нужен легкий Python-объект с полями, дефолтами и простой логикой; отлично для внутренних моделей предметной области, но по умолчанию не делает рантайм-проверку типов.
@@ -2937,7 +2818,7 @@ Pydantic-модель используйте, когда нужна рантай
 
 ---
 
-@overload in typing is used to define multiple type signatures for the same function so static type checkers can understand different argument/return type combinations. The overloads are only for type checking; the actual implementation is written once without @overload.
+**@overload in typing** is used to define multiple type signatures for the same function so static type checkers can understand different argument/return type combinations. The overloads are only for type checking; the actual implementation is written once without @overload.
 
 It is useful when the return type depends on the input type, for example when a function returns different types depending on arguments.
 
@@ -2965,13 +2846,13 @@ Common pitfalls:
 
 - Перегрузки работают только для статической проверки типов и игнорируются во время выполнения.
 
-**106. How do you type a decorator while preserving the original function signature? (Explain ParamSpec and Concatenate.)**
+**106. How do you type a decorator while preserving the original function signature?** (Explain ParamSpec and Concatenate.)
 
 ---
 
-To type a decorator and preserve the original function signature, use ParamSpec to capture the wrapped function’s parameter types and TypeVar for its return type. Then type the decorator as taking Callable[P, R] and returning Callable[P, R], so the parameters/return are preserved. Concatenate is used when the decorator adds or modifies leading parameters in the wrapper. For example, if your wrapper injects a Context as the first argument, you can express that as Callable[Concatenate[Context, P], R].
+To type a decorator and preserve the original function signature, use **ParamSpec** to capture the wrapped function's parameter types and **TypeVar** for its return type. Then type the decorator as taking Callable[P, R] and returning Callable[P, R], so the parameters/return are preserved. **Concatenate** is used when the decorator adds or modifies leading parameters in the wrapper. For example, if your wrapper injects a Context as the first argument, you can express that as Callable[Concatenate[Context, P], R].
 
-Чтобы типизировать декоратор и сохранить исходную сигнатуру функции, используют ParamSpec для “захвата” типов параметров оборачиваемой функции и TypeVar для её возвращаемого типа. Тогда декоратор типизируется как принимающий Callable[P, R] и возвращающий Callable[P, R], что сохраняет параметры и return type. Concatenate нужен, когда декоратор добавляет или меняет начальные параметры у обертки. Например, если обертка добавляет Context первым аргументом, это выражается как Callable[Concatenate[Context, P], R].
+Чтобы типизировать декоратор и сохранить исходную сигнатуру функции, используют ParamSpec для "захвата" типов параметров оборачиваемой функции и TypeVar для её возвращаемого типа. Тогда декоратор типизируется как принимающий Callable[P, R] и возвращающий Callable[P, R], что сохраняет параметры и return type. Concatenate нужен, когда декоратор добавляет или меняет начальные параметры у обертки. Например, если обертка добавляет Context первым аргументом, это выражается как Callable[Concatenate[Context, P], R].
 
 **107. NewType vs type alias — what is the practical difference?**
 
@@ -2995,7 +2876,7 @@ NewType создаёт отдельный тип для статической �
 
 Пример: `UserId = NewType("UserId", int)`
 
-**108. How do you configure mypy or pyright for a real project? (strict mode, incremental checks, stub files)**
+**108. How do you configure mypy or pyright for a real project(strict mode, incremental checks, stub files)?**
 
 ---
 
@@ -3009,33 +2890,11 @@ Enable strictness and keep incremental cache on (default).
 
 Run on your source package(s) only (not the whole repo).
 
-Example mypy.ini:
-
-```ini
-[mypy]
-python_version = 3.11
-strict = True
-warn_unused_ignores = True
-warn_redundant_casts = True
-warn_return_any = True
-no_implicit_reexport = True
-pretty = True
-show_error_codes = True
-
 # incremental cache (default, but explicit is fine)
-
-incremental = True
-cache_dir = .mypy_cache
 
 # keep third-party noise manageable
 
-ignore_missing_imports = False
-
-[mypy-some_untyped_lib.*]
-ignore_missing_imports = True
-```
-
-Incremental / “fast” workflow:
+Incremental / "fast" workflow:
 
 - Local: mypy package_name/
 
@@ -3045,14 +2904,9 @@ Pre-commit: run mypy only on staged files or the package (pre-commit is already 
 
 Stub files (.pyi):
 
-- Use when you can’t edit the code (vendor/third-party) or want a clean typed interface.
+- Use when you can't edit the code (vendor/third-party) or want a clean typed interface.
 
 - Put stubs in a typings/ dir and point mypy to it:
-
-```ini
-[mypy]
-mypy_path = typings
-```
 
 - Or create a package stub next to code: module.pyi overrides module.py typing view.
 
@@ -3062,22 +2916,9 @@ pyright (strict, fast, great incremental)
 
 - Use typeCheckingMode: "strict" and limit scope to your src.
 
-Example pyrightconfig.json:
-
-```json
-{
-  "typeCheckingMode": "strict",
-  "pythonVersion": "3.11",
-  "include": ["src"],
-  "exclude": ["**/build", "**/dist", "**/.venv", "**/.mypy_cache"],
-  "reportMissingTypeStubs": "warning",
-  "reportUnknownMemberType": "warning"
-}
-```
-
 Incremental checks:
 
-- Pyright is designed to be fast; in editors it’s incremental automatically.
+- Pyright is designed to be fast; in editors it's incremental automatically.
 
 - In CI: pyright over include paths.
 
@@ -3105,28 +2946,6 @@ Practical setup in a repo
 
 - Проверяй только свои пакеты/папки с кодом, а не весь репозиторий.
 
-Пример mypy.ini:
-
-```ini
-[mypy]
-python_version = 3.11
-strict = True
-warn_unused_ignores = True
-warn_redundant_casts = True
-warn_return_any = True
-no_implicit_reexport = True
-pretty = True
-show_error_codes = True
-
-incremental = True
-cache_dir = .mypy_cache
-
-ignore_missing_imports = False
-
-[mypy-some_untyped_lib.*]
-ignore_missing_imports = True
-```
-
 Инкрементальные/быстрые проверки:
 
 - Локально: mypy package_name/
@@ -3141,31 +2960,13 @@ Stub-файлы (.pyi):
 
 - Положи стабы в typings/ и укажи mypy путь:
 
-```ini
-[mypy]
-mypy_path = typings
-```
-
 - Или module.pyi рядом с module.py — будет использоваться для типизации.
 
 2. pyright (strict, быстрый, отличный incremental)
+   - Добавь pyright и создай pyrightconfig.json.
 
-- Добавь pyright и создай pyrightconfig.json.
-
-- Включи typeCheckingMode: "strict" и ограничь область include своим src.
-
-- Пример pyrightconfig.json:
-
-```json
-{
-  "typeCheckingMode": "strict",
-  "pythonVersion": "3.11",
-  "include": ["src"],
-  "exclude": ["**/build", "**/dist", "**/.venv", "**/.mypy_cache"],
-  "reportMissingTypeStubs": "warning",
-  "reportUnknownMemberType": "warning"
-}
-```
+   - Включи typeCheckingMode: "strict" и ограничь область include своим src.
+     Пример pyrightconfig.json:
 
 Инкрементальные проверки:
 
@@ -3180,14 +2981,13 @@ Stub-файлы:
 - Для библиотек без типов чаще всего ставят types-... пакет, если есть.
 
 3. Рекомендованный минимум для репы
+   - Код в src/, проверка только src/your_pkg.
 
-- Код в src/, проверка только src/your_pkg.
+   - CI job: mypy src/your_pkg или pyright.
 
-- CI job: mypy src/your_pkg или pyright.
+   - pre-commit hook на выбранный инструмент.
 
-- pre-commit hook на выбранный инструмент.
-
-- Строгость держать глобально, а послабления делать точечно по модулям/пакетам.
+   - Строгость держать глобально, а послабления делать точечно по модулям/пакетам.
 
 **109. What is the difference between asyncio.Task and asyncio.Future?**
 
@@ -3204,7 +3004,7 @@ asyncio.Task — это подкласс Future, который оборачив
 
 ---
 
-Structured concurrency in Python means that concurrent tasks are created and managed within a well-defined scope so their lifetime is tied to that scope. In Python it is implemented with asyncio.TaskGroup (Python 3.11+).
+**Structured concurrency** in Python means that concurrent tasks are created and managed within a well-defined scope so their lifetime is tied to that scope. In Python it is implemented with asyncio.TaskGroup (Python 3.11+).
 
 TaskGroup ensures that all tasks started inside the group are awaited before the block exits. If one task fails, the remaining tasks are automatically cancelled and the exception is propagated. This prevents orphaned tasks and makes error handling predictable.
 
@@ -3216,7 +3016,7 @@ TaskGroup гарантирует, что все задачи, созданные
 
 ---
 
-Backpressure is a mechanism where a system slows down producers when consumers can’t keep up, preventing unbounded buffering, memory growth, and cascading latency. In async code you apply backpressure by limiting how much work can be “in flight” and by bounding queues between stages.
+**Backpressure** is a mechanism where a system slows down producers when consumers can't keep up, preventing unbounded buffering, memory growth, and cascading latency. In async code you apply backpressure by limiting how much work can be "in flight" and by bounding queues between stages.
 
 Common ways to limit concurrency:
 
@@ -3228,7 +3028,7 @@ Common ways to limit concurrency:
 
 - Rate limiting: enforce max requests per time window (often combined with semaphores).
 
-Backpressure (обратное давление) — это механизм, при котором система замедляет производителей, когда потребители не успевают, чтобы не росли бесконечные буферы, память и задержки. В async-коде backpressure достигается ограничением количества задач “в полёте” и ограниченными очередями между этапами обработки.
+Backpressure (обратное давление) — это механизм, при котором система замедляет производителей, когда потребители не успевают, чтобы не росли бесконечные буферы, память и задержки. В async-коде backpressure достигается ограничением количества задач "в полёте" и ограниченными очередями между этапами обработки.
 
 Способы ограничить конкурентность:
 
@@ -3248,7 +3048,7 @@ Cancellation in asyncio is delivered by raising asyncio.CancelledError inside th
 
 Key rules:
 
-- Don’t swallow CancelledError; if you catch it, re-raise it after cleanup.
+- Don't swallow CancelledError; if you catch it, re-raise it after cleanup.
 
 - Use finally for cleanup; keep cancellation paths fast.
 
@@ -3260,7 +3060,7 @@ Key rules:
 
 Основные правила:
 
-- Не “глотать” CancelledError; если поймал — после cleanup обязательно raise.
+- Не "глотать" CancelledError; если поймал — после cleanup обязательно raise.
 
 - Делай очистку в finally, и пусть путь отмены будет быстрым.
 
@@ -3272,8 +3072,8 @@ Key rules:
 
 ---
 
-Use asyncio.to_thread() (or loop.run_in_executor() / a thread pool) when you need to call blocking code from async code without freezing the event loop. Typical cases: blocking I/O libraries (non-async DB/HTTP clients, filesystem calls that block), and “mostly I/O” work that releases the GIL.
-Do not use threads for CPU-bound Python work; it won’t scale due to the GIL—use processes instead.
+Use asyncio.to_thread() (or loop.run_in_executor() / a thread pool) when you need to call blocking code from async code without freezing the event loop. Typical cases: blocking I/O libraries (non-async DB/HTTP clients, filesystem calls that block), and "mostly I/O" work that releases the GIL.
+Do not use threads for CPU-bound Python work; it won't scale due to the GIL—use processes instead.
 
 Используйте asyncio.to_thread() (или loop.run_in_executor() / thread pool), когда из async-кода нужно вызвать блокирующую функцию и не заморозить event loop. Типичные случаи: блокирующие I/O-библиотеки (не-async клиенты БД/HTTP), операции с файловой системой и другой ввод/вывод, который блокирует поток, а также работа, которая в основном I/O и может отпускать GIL.
 Не используйте потоки для CPU-bound задач на чистом Python: из-за GIL они плохо масштабируются — для этого лучше процессы.
@@ -3282,7 +3082,7 @@ Do not use threads for CPU-bound Python work; it won’t scale due to the GIL—
 
 ---
 
-contextvars is a Python module that provides context-local variables. They store values that are specific to the current async task or execution context, avoiding conflicts between concurrent requests.
+**contextvars** is a Python module that provides context-local variables. They store values that are specific to the current async task or execution context, avoiding conflicts between concurrent requests.
 
 They are commonly used in async systems to keep per-request data such as request IDs, trace IDs, or user context without passing them through every function.
 
@@ -3310,8 +3110,8 @@ contextvars — это модуль Python, который предоставл�
 
 ---
 
-WSGI is a synchronous interface between Python web servers and applications. Each request is handled in a blocking way, typically using threads or processes. The server calls the application once per request and waits until it finishes.
-ASGI is an asynchronous interface designed for async frameworks. It supports async/await, long-lived connections, and protocols like WebSockets. Requests are handled by an event loop where many connections can be processed concurrently without blocking threads.
+**WSGI** is a synchronous interface between Python web servers and applications. Each request is handled in a blocking way, typically using threads or processes. The server calls the application once per request and waits until it finishes.
+**ASGI** is an asynchronous interface designed for async frameworks. It supports async/await, long-lived connections, and protocols like WebSockets. Requests are handled by an event loop where many connections can be processed concurrently without blocking threads.
 
 Основное отличие — модель выполнения.
 WSGI — это синхронный интерфейс между веб-сервером и Python-приложением. Каждый запрос обрабатывается блокирующим образом, обычно через потоки или процессы. Сервер вызывает приложение для каждого запроса и ждёт завершения обработки.
@@ -3325,7 +3125,7 @@ ASGI — асинхронный интерфейс, созданный для as
 
 Benefits:
 
-Reduces memory usage because instances don’t need a \_\_\_dict\_\_\_\_.
+Reduces memory usage because instances don't need a \_\_\_dict\_\_\_\_.
 
 Slightly faster attribute access in some cases.
 
@@ -3371,7 +3171,7 @@ Debug approach:
 
 - Reproduce with a tight loop and stable workload.
 
-- Take tracemalloc snapshots and compare “top differences”.
+- Take tracemalloc snapshots and compare "top differences".
 
 - Check for growing containers, caches, globals, singletons.
 
@@ -3385,7 +3185,7 @@ Debug approach:
 
 - Воспроизвести утечку в цикле со стабильной нагрузкой.
 
-- Снять tracemalloc snapshots и сравнить “top differences”.
+- Снять tracemalloc snapshots и сравнить "top differences".
 
 - Проверить растущие контейнеры, кэши, глобальные переменные, синглтоны.
 
@@ -3541,7 +3341,7 @@ MAJOR увеличивается, когда вносятся изменения
 
 ---
 
-Entry points (console scripts) are a packaging feature that allows a Python package to expose executable command-line tools. When the package is installed, the packaging system generates a small wrapper script that calls a specified Python function.
+**Entry points (console scripts)** are a packaging feature that allows a Python package to expose executable command-line tools. When the package is installed, the packaging system generates a small wrapper script that calls a specified Python function.
 They are defined in the project configuration and map a command name to a function inside the package.
 
 Entry points / console scripts — это механизм упаковки Python, который позволяет пакету предоставлять исполняемые команды для командной строки. При установке пакета система создаёт небольшой скрипт-обёртку, который вызывает указанную функцию Python.
@@ -3581,7 +3381,7 @@ Unit tests verify small, isolated pieces of code such as functions or classes. T
 
 Integration tests verify how multiple components work together, for example an application interacting with a database or external service. They test real interactions between modules and help detect problems in configuration, data flow, or interfaces.
 
-End-to-end (E2E) tests verify the complete system from the user’s perspective. They simulate real user behavior and test the entire workflow across all components (UI, backend, database, external services). They are slower but ensure the whole system works correctly.
+End-to-end (E2E) tests verify the complete system from the user's perspective. They simulate real user behavior and test the entire workflow across all components (UI, backend, database, external services). They are slower but ensure the whole system works correctly.
 
 Unit tests проверяют небольшие изолированные части кода, например функции или классы. Обычно они используют моки для внешних зависимостей (база данных, API, файлы) и выполняются очень быстро. Их используют во время разработки для проверки логики и предотвращения регрессий.
 
@@ -3623,7 +3423,7 @@ Typical practices:
 
 - Использовать AsyncMock для моков async-функций.
 
-- Контролировать время “фейковыми” часами, чтобы не делать реальные sleep.
+- Контролировать время "фейковыми" часами, чтобы не делать реальные sleep.
 
 - Проверять TaskGroup/отмену, убеждаясь что задачи отменяются и cleanup выполняется.
 
@@ -3661,7 +3461,7 @@ Retry:
 
 - Set per-attempt timeout and an overall deadline.
 
-- Don’t retry non-idempotent operations unless you have idempotency keys.
+- Don't retry non-idempotent operations unless you have idempotency keys.
 
 Circuit breaker:
 
@@ -3681,7 +3481,7 @@ Idempotency:
 
 - Server must return the same response for the same key and reject conflicting payloads for the same key.
 
-- Design operations as idempotent where possible (PUT for replace, “create-if-not-exists”, upserts).
+- Design operations as idempotent where possible (PUT for replace, "create-if-not-exists", upserts).
 
 Ретраи, circuit breaker и идемпотентность нужно делать вместе, иначе ретраи могут усилить аварию.
 
@@ -3703,11 +3503,11 @@ Circuit breaker:
 
 - Half-open: пускать ограниченное число пробных запросов для проверки восстановления.
 
-- Держать отдельно по endpoint/host, чтобы не “уронить” всё сразу.
+- Держать отдельно по endpoint/host, чтобы не "уронить" всё сразу.
 
 Idempotency (идемпотентность):
 
-- Повторный запрос не должен давать второй “эффект” (особенно для POST, создающих ресурс).
+- Повторный запрос не должен давать второй "эффект" (особенно для POST, создающих ресурс).
 
 - Использовать Idempotency-Key (или request id) и хранить результат по (клиент, ключ) с TTL.
 
@@ -3725,7 +3525,7 @@ Typical implementation:
 
 - Handle termination signals (SIGTERM, SIGINT) and start shutdown.
 
-- Stop accepting new traffic (close listeners / tell load balancer “unready”).
+- Stop accepting new traffic (close listeners / tell load balancer "unready").
 
 - Cancel/stop background tasks and worker loops.
 
@@ -3741,7 +3541,7 @@ Graceful shutdown — это корректная остановка серви�
 
 - Обработать сигналы завершения (SIGTERM, SIGINT) и запустить shutdown.
 
-- Перестать принимать новый трафик (закрыть listener / выставить “unready” в балансировщике).
+- Перестать принимать новый трафик (закрыть listener / выставить "unready" в балансировщике).
 
 - Остановить/отменить фоновые задачи и воркеры.
 
@@ -3751,7 +3551,7 @@ Graceful shutdown — это корректная остановка серви�
 
 - Завершиться с понятным кодом выхода.
 
-**134. What concurrency problems can occur in Python systems**
+**134. What concurrency problems can occur in Python systems?**
 
 ---
 
@@ -3759,7 +3559,7 @@ Common concurrency problems in Python systems:
 
 - Race conditions — multiple threads/tasks modify shared state at the same time, leading to unpredictable results.
 
-- Deadlocks — two or more threads/tasks wait on each other’s locks and none can proceed.
+- Deadlocks — two or more threads/tasks wait on each other's locks and none can proceed.
 
 - Livelocks — tasks keep reacting to each other and retrying but no progress is made.
 
@@ -3797,7 +3597,7 @@ Good practices:
 
 - Rotate secrets regularly and support revocation.
 
-- Don’t log secrets; redact them in logs and error reports.
+- Don't log secrets; redact them in logs and error reports.
 
 - Separate configs from secrets; use different values per environment (dev/staging/prod).
 
@@ -3807,7 +3607,7 @@ Good practices:
 
 - Использовать переменные окружения или менеджер секретов (Vault, AWS Secrets Manager, GCP Secret Manager, Azure Key Vault).
 
-- Шифровать секреты “на диске” и выдавать доступ по принципу минимальных прав.
+- Шифровать секреты "на диске" и выдавать доступ по принципу минимальных прав.
 
 - Регулярно ротировать секреты и поддерживать отзыв/замену.
 
@@ -3875,7 +3675,7 @@ SBOM (Software Bill of Materials) — вести список всех зави�
 
 ---
 
-Design boundaries so dependencies flow one way and shared concepts live in a stable “lower” layer.
+Design boundaries so dependencies flow one way and shared concepts live in a stable "lower" layer.
 
 Techniques:
 
@@ -3889,9 +3689,9 @@ Use local imports only as a last resort (inside functions) to break a cycle.
 
 For typing-only dependencies, use if TYPE_CHECKING: and string annotations to avoid runtime imports.
 
-Avoid “god modules”; split by feature, not by reuse.
+Avoid "god modules"; split by feature, not by reuse.
 
-Проектируй границы модулей так, чтобы зависимости шли в одну сторону, а общие сущности жили в стабильном “нижнем” слое.
+Проектируй границы модулей так, чтобы зависимости шли в одну сторону, а общие сущности жили в стабильном "нижнем" слое.
 
 Техники:
 
@@ -3905,7 +3705,7 @@ Avoid “god modules”; split by feature, not by reuse.
 
 Для зависимостей только ради типизации: if TYPE_CHECKING: и строковые аннотации, чтобы не было runtime-импортов.
 
-Избегай “god module”; дели по фичам, а не по попытке всё переиспользовать.
+Избегай "god module"; дели по фичам, а не по попытке всё переиспользовать.
 
 **139. What is dependency injection in Python and when should it be used?**
 
@@ -3923,13 +3723,13 @@ Dependency injection — это паттерн проектирования, п�
 
 ---
 
-Adapter wraps an existing class to match a required interface. You implement it as a thin wrapper that translates method names/arguments and delegates to the adaptee.
+**Adapter** wraps an existing class to match a required interface. You implement it as a thin wrapper that translates method names/arguments and delegates to the adaptee.
 
-Strategy defines a family of interchangeable behaviors. In Python it’s often implemented by passing a callable (function) or an object implementing a common protocol, then selecting/swapping it at runtime.
+**Strategy** defines a family of interchangeable behaviors. In Python it's often implemented by passing a callable (function) or an object implementing a common protocol, then selecting/swapping it at runtime.
 
-Factory centralizes object creation. In Python it’s commonly a function or classmethod that chooses which class to instantiate based on config/type and returns the created object.
+**Factory** centralizes object creation. In Python it's commonly a function or classmethod that chooses which class to instantiate based on config/type and returns the created object.
 
-Adapter оборачивает существующий класс, чтобы привести его к нужному интерфейсу. В Python это тонкая обёртка, которая преобразует методы/аргументы и делегирует вызовы “адаптируемому” объекту.
+Adapter оборачивает существующий класс, чтобы привести его к нужному интерфейсу. В Python это тонкая обёртка, которая преобразует методы/аргументы и делегирует вызовы "адаптируемому" объекту.
 
 Strategy задаёт набор взаимозаменяемых алгоритмов. В Python чаще всего это передача callable (функции) или объекта с общим протоколом, с возможностью выбирать/менять стратегию во время выполнения.
 
@@ -3939,20 +3739,26 @@ Factory централизует создание объектов. В Python о
 
 ---
 
-Inheritance means a class derives from another class and reuses or extends its behavior. It represents an “is-a” relationship (for example, Dog is an Animal).
-Composition means a class contains other objects and delegates work to them. It represents a “has-a” relationship (for example, Car has an Engine).
-Inheritance is useful when there is a clear hierarchical relationship. Composition is usually preferred because it provides more flexibility and reduces tight coupling.
+**Inheritance** means a class derives from another class and reuses or extends its behavior. It represents an "is-a" relationship (for example, Dog is an Animal).
+**Composition** means a class contains other objects and delegates work to them. It represents a "has-a" relationship (for example, Car has an Engine).
+**Inheritance** is useful when there is a clear hierarchical relationship. **Composition** is usually preferred because it provides more flexibility and reduces tight coupling.
 
-Наследование означает, что класс создаётся на основе другого класса и наследует или расширяет его поведение. Это отношение типа “является” (например, Dog является Animal).
-Композиция означает, что класс содержит другие объекты и использует их для выполнения задач. Это отношение типа “имеет” (например, Car имеет Engine).
+Наследование означает, что класс создаётся на основе другого класса и наследует или расширяет его поведение. Это отношение типа "является" (например, Dog является Animal).
+Композиция означает, что класс содержит другие объекты и использует их для выполнения задач. Это отношение типа "имеет" (например, Car имеет Engine).
 Наследование полезно при чёткой иерархии. Композиция чаще предпочтительнее, потому что она более гибкая и уменьшает жёсткую связанность.
 
 **142. What is EAFP vs LBYL in Python and when should each approach be used?**
 
 ---
 
-EAFP (“Easier to Ask Forgiveness than Permission”) means you try the operation and handle exceptions if it fails. It’s common in Python and works well in concurrent code where state can change between a check and an action.
-LBYL (“Look Before You Leap”) means you check conditions before doing the operation (e.g., if key in d:). It’s useful when exceptions are expensive/too frequent, or when you want clearer control flow for expected cases.
+EAFP ("Easier to Ask Forgiveness than Permission") means you try the operation and handle exceptions if it fails. It's common in Python and works well in concurrent code where state can change between a check and an action.
+LBYL ("Look Before You Leap") means you check conditions before doing the operation (e.g., if key in d:). It's useful when exceptions are expensive/too frequent, or when you want clearer control flow for expected cases.
 
-EAFP (“проще попросить прощения, чем разрешения”) — это подход: сначала выполнить операцию, а если она не удалась — обработать исключение. Он типичен для Python и особенно хорош в конкурентном коде, где состояние может измениться между проверкой и действием.
-LBYL (“сначала посмотри, потом прыгай”) — это подход: сначала проверить условие, потом выполнить действие (например if key in d:). Он полезен, когда ошибки ожидаемы и часты (исключения будут слишком дорогими), или когда нужен более явный контроль потока выполнения.
+EAFP ("проще попросить прощения, чем разрешения") — это подход: сначала выполнить операцию, а если она не удалась — обработать исключение. Он типичен для Python и особенно хорош в конкурентном коде, где состояние может измениться между проверкой и действием.
+LBYL ("сначала посмотри, потом прыгай") — это подход: сначала проверить условие, потом выполнить действие (например if key in d:). Он полезен, когда ошибки ожидаемы и часты (исключения будут слишком дорогими), или когда нужен более явный контроль потока выполнения.
+
+**143. Why does Python need garbage collector if it already has reference counting?**
+
+Python uses reference counting for memory management, but reference counting cannot handle circular references. The garbage collector is needed to detect and clean up objects involved in reference cycles.
+
+Python использует подсчёт ссылок для управления памятью, но подсчёт ссылок не может обрабатывать циклические ссылки. Сборщик мусора нужен для обнаружения и удаления объектов, участвующих в циклах ссылок.
