@@ -322,9 +322,9 @@ In production, I use AWS Systems Manager to manage and automate operations witho
 
 ## **23. What is AWS CloudFormation, and how does it facilitate DevOps practices?**
 
-## AWS CloudFormation is an Infrastructure as Code service that allows you to define and provision AWS resources using templates. It facilitates DevOps by enabling automated, repeatable, and version-controlled deployments, consistent environments, easier rollbacks, and integration into CI/CD pipelines.
+**AWS CloudFormation** is an Infrastructure as Code service that allows you to define and provision AWS resources using templates. It facilitates DevOps by enabling automated, repeatable, and version-controlled deployments, consistent environments, easier rollbacks, and integration into CI/CD pipelines.
 
-AWS CloudFormation — это сервис Infrastructure as Code, позволяющий описывать и разворачивать ресурсы AWS с помощью шаблонов. Он поддерживает DevOps за счёт автоматизации, повторяемости, контроля версий, одинаковых окружений, упрощённого отката и интеграции в CI/CD.
+**AWS CloudFormation** — это сервис Infrastructure as Code, позволяющий описывать и разворачивать ресурсы AWS с помощью шаблонов. Он поддерживает DevOps за счёт автоматизации, повторяемости, контроля версий, одинаковых окружений, упрощённого отката и интеграции в CI/CD.
 
 ## **24. What is Auto Scaling?**
 
