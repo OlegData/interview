@@ -1,24 +1,14 @@
 # MySQL
 
-**1. What is MySQL and how does it work?**
-
----
+## **1. What is MySQL and how does it work?**
 
 MySQL is an open-source relational database management system (RDBMS) that stores data in structured tables and uses SQL (Structured Query Language) to manage it.
 
 How it works:
 
-Client-Server Architecture
-Applications (clients) send SQL queries to the MySQL server.
-The server processes queries and returns results.
+Client-Server Architecture - Applications (clients) send SQL queries to the MySQL server. The server processes queries and returns results.
 
-Query Processing
-
-Parse the SQL statement
-
-Optimize the execution plan
-
-Execute using storage engine
+Query Processing - Parse the SQL statement. Optimize the execution plan. Execute using storage engine
 
 Storage Engines
 MySQL supports different engines:
@@ -39,6 +29,8 @@ Supports replication (primary-replica) and clustering for scalability and availa
 
 In short:
 MySQL receives SQL queries, optimizes them, accesses data through a storage engine, and returns results while ensuring consistency and reliability.
+
+---
 
 MySQL — это реляционная система управления базами данных (СУБД) с открытым исходным кодом, использующая SQL.
 
@@ -67,46 +59,32 @@ MyISAM — без транзакций (устаревший вариант)
 
 Коротко: MySQL — это сервер, который обрабатывает SQL-запросы и управляет структурированными данными.
 
-**2. What are the different data types available in MySQL?**
-
----
+## **2. What are the different data types available in MySQL?**
 
 MySQL provides several categories of data types:
 
 Numeric Types
 
 TINYINT, SMALLINT, MEDIUMINT, INT, BIGINT
-
 DECIMAL (fixed-point)
-
 FLOAT, DOUBLE (floating-point)
-
 BIT
 
 Date and Time Types
 
-DATE
-
-TIME
-
-DATETIME
-
-TIMESTAMP
-
+DATE,
+TIME,
+DATETIME,
+TIMESTAMP,
 YEAR
 
 String Types
 
-CHAR (fixed length)
-
-VARCHAR (variable length)
-
-TEXT (TINYTEXT, TEXT, MEDIUMTEXT, LONGTEXT)
-
-BLOB (binary data)
-
-ENUM
-
+CHAR (fixed length),
+VARCHAR (variable length),
+TEXT (TINYTEXT, TEXT, MEDIUMTEXT, LONGTEXT),
+BLOB (binary data),
+ENUM,
 SET
 
 JSON Type
@@ -115,12 +93,9 @@ JSON (stores JSON documents)
 
 Spatial Types
 
-GEOMETRY
-
-POINT
-
-LINESTRING
-
+GEOMETRY,
+POINT,
+LINESTRING,
 POLYGON
 
 Summary:
@@ -134,6 +109,8 @@ String → text/binary
 JSON → semi-structured data
 
 Spatial → geographic data
+
+---
 
 В MySQL есть несколько категорий типов данных:
 
@@ -154,9 +131,7 @@ GEOMETRY, POINT, POLYGON и др.
 
 Итого: MySQL поддерживает числовые, временные, строковые, JSON и географические типы данных.
 
-**3. How is MySQL different from other relational database systems?**
-
----
+## **3. How is MySQL different from other relational database systems?**
 
 MySQL differs from other relational database systems in several ways:
 

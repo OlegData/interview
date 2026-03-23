@@ -1,8 +1,6 @@
 # Database
 
-**1. What is a Database Schema and Why is It Important?**
-
----
+## **1. What is a Database Schema and Why is It Important?**
 
 A database schema is a logical container (namespace) within a database that organizes database objects such as tables, views, indexes, functions, and types.
 
@@ -47,9 +45,7 @@ So, a schema helps structure, secure, and manage a database effectively.
 
 Схема помогает структурировать, защищать и масштабировать базу данных.
 
-**2. Explain the Difference Between a Primary Key and a Foreign Key.**
-
----
+## **2. Explain the Difference Between a Primary Key and a Foreign Key.**
 
 A Primary Key (PK) uniquely identifies each row in a table.
 
@@ -112,9 +108,7 @@ Primary Key — идентификатор записи в своей табли
 
 Foreign Key — связь между таблицами.
 
-**3. What is CRUD Operations?**
-
----
+## **3. What is CRUD Operations?**
 
 CRUD stands for Create, Read, Update, Delete — the four basic operations performed on data in a database or application.
 
@@ -144,9 +138,7 @@ CRUD — это Create, Read, Update, Delete (Создание, Чтение, О
 
 CRUD — это основа работы с данными в любой системе.
 
-**4. How to Ensure Data Integrity in a Relational Database?**
-
----
+## **4. How to Ensure Data Integrity in a Relational Database?**
 
 To ensure data integrity in a relational database, use built-in constraints and transactional mechanisms.
 
@@ -196,9 +188,7 @@ To ensure data integrity in a relational database, use built-in constraints and 
 
 - Валидация на уровне приложения - Проверка данных до записи в БД.
 
-**5. Explain the Difference Between OLTP and OLAP Databases.**
-
----
+## **5. Explain the Difference Between OLTP and OLAP Databases.**
 
 LTP (Online Transaction Processing) is designed for real-time transactional systems.
 
@@ -258,9 +248,7 @@ OLTP — операционные транзакции.
 
 OLAP — аналитика и отчёты.
 
-**6. What are the ACID Properties in a Database and Why are They Important?**
-
----
+## **6. What are the ACID Properties in a Database and Why are They Important?**
 
 ACID describes four guarantees that ensure reliable database transactions:
 
@@ -302,9 +290,7 @@ ACID — это четыре свойства, гарантирующие над
 
 - Критично для финансовых и ответственных систем
 
-**7.Describe the Process of ETL (Extract, Transform, Load).**
-
----
+## **7.Describe the Process of ETL (Extract, Transform, Load).**
 
 ETL (Extract, Transform, Load) is a process used to move and prepare data from multiple sources into a data warehouse or analytics system.
 
@@ -358,18 +344,16 @@ Load (Загрузка) - Подготовленные данные загруж
 
 ETL обеспечивает качество данных и подготовку их для аналитики и отчётности.
 
-**8. What is a Data Warehouse and How is it Different from a Traditional Database?**
-
----
+## **8. What is a Data Warehouse and How is it Different from a Traditional Database?**
 
 A Data Warehouse is a centralized system designed for storing and analyzing large volumes of historical data from multiple sources. It is optimized for reporting and analytics (OLAP).
 
 A Traditional Database (typically OLTP) is designed for day-to-day transactional operations such as inserts, updates, and deletes.
 
-| Key differences:                                                     | Workload                                            | Data Structure                                              | Data Type                                    |
-| -------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------- |
+| Key differences: | Workload | Data Structure | Data Type |
+| -- | | -- | -- |
 | Purpose Data Warehouse → analytics, reporting, business intelligence | Data Warehouse → complex, long-running read queries | Data Warehouse → often denormalized (star/snowflake schema) | Data Warehouse → historical, aggregated data |
-| Traditional DB → operational transactions                            | Traditional DB → many short, fast transactions      | Traditional DB → normalized schema                          | Traditional DB → current, real-time data     |
+| Traditional DB → operational transactions | Traditional DB → many short, fast transactions | Traditional DB → normalized schema | Traditional DB → current, real-time data |
 
 In short:
 Traditional databases run the business; data warehouses analyze the business.
@@ -388,8 +372,6 @@ Data Warehouse (Хранилище данных) — это централизо
 Коротко: Операционная БД обслуживает бизнес-процессы, хранилище данных анализирует их.
 
 **9. How to Handle Data Migration Between Different Databases?**
-
----
 
 Handling data migration between different databases requires planning, validation, and controlled execution.
 
@@ -479,9 +461,7 @@ ETL-инструменты
 Тестирование и план отката
 Обязательная проверка и возможность rollback.
 
-**10. What is a Relational Database and How does it Differ from a NoSQL Database?**
-
----
+## **10. What is a Relational Database and How does it Differ from a NoSQL Database?**
 
 A Relational Database (RDBMS) stores data in structured tables (rows and columns) and uses SQL for querying. It enforces relationships through primary and foreign keys and follows a fixed schema.
 
@@ -515,10 +495,10 @@ Key features:
 
 Main differences:
 
-| Structure                             | Scaling                                 | Consistency                            | Use cases                                                  |
-| ------------------------------------- | --------------------------------------- | -------------------------------------- | ---------------------------------------------------------- |
-| Relational → tables with fixed schema | Relational → typically vertical scaling | Relational → strong consistency (ACID) | Relational → financial systems, transactional apps         |
-| NoSQL → flexible data models          | NoSQL → horizontal scaling              | NoSQL → often eventual consistency     | NoSQL → big data, real-time analytics, distributed systems |
+| Structure | Scaling | Consistency | Use cases |
+| - | | -- | - |
+| Relational → tables with fixed schema | Relational → typically vertical scaling | Relational → strong consistency (ACID) | Relational → financial systems, transactional apps |
+| NoSQL → flexible data models | NoSQL → horizontal scaling | NoSQL → often eventual consistency | NoSQL → big data, real-time analytics, distributed systems |
 
 Реляционная база данных (RDBMS) хранит данные в таблицах (строки и столбцы) и использует SQL. Связи между таблицами реализуются через ключи и строгую схему.
 
@@ -552,9 +532,7 @@ NoSQL база данных хранит данные в гибких форма
 
 - NoSQL — гибкость и масштабируемость.
 
-**11. Explain the Importance of Data Normalization.**
-
----
+## **11. Explain the Importance of Data Normalization.**
 
 Data normalization is the process of organizing data in a relational database to reduce redundancy and improve data integrity.
 
@@ -592,9 +570,7 @@ In short: normalization makes databases more consistent, reliable, and easier to
 
 Коротко: нормализация делает базу данных более устойчивой, логичной и удобной в сопровождении.
 
-**12. How to Perform Data Cleaning and Preprocessing?**
-
----
+## **12. How to Perform Data Cleaning and Preprocessing?**
 
 Data cleaning and preprocessing prepare raw data for analysis or storage to ensure accuracy, consistency, and usability.
 
@@ -646,9 +622,7 @@ Main steps:
 
 **Цель** — получить чистые и корректные данные для анализа и моделей.
 
-**13. What are the Common SQL Functions Used for Data Aggregation?**
-
----
+## **13. What are the Common SQL Functions Used for Data Aggregation?**
 
 Common SQL aggregation functions operate on multiple rows and return a single result.
 
@@ -690,9 +664,7 @@ These functions are essential for reporting, analytics, and summarizing data.
 
 Эти функции применяются для отчётов, аналитики и сводных расчётов.
 
-**14. Explain the Concept of Database Transactions and Their Importance in Application Development**
-
----
+## **14. Explain the Concept of Database Transactions and Their Importance in Application Development**
 
 A database transaction is a sequence of operations executed as a single logical unit of work.
 All operations inside a transaction either succeed together or fail together.
@@ -755,9 +727,7 @@ In short, transactions ensure data consistency, correctness, and reliability in 
 
 Транзакции — основа безопасной и корректной работы любой серьёзной системы.
 
-**15. How to Optimize Database Queries for Performance?**
-
----
+## **15. How to Optimize Database Queries for Performance?**
 
 To optimize database queries for performance, follow a structured approach:
 
@@ -813,9 +783,7 @@ In short: measure → analyze → index → rewrite → monitor.
 
 Главное правило: измеряй, анализируй, оптимизируй, проверяй.
 
-**16. What are Stored Procedures and When would we Use Them?**
-
----
+## **16. What are Stored Procedures and When would we Use Them?**
 
 Stored Procedures are database objects that contain predefined SQL logic stored and executed on the database server.
 
@@ -882,9 +850,7 @@ Stored Procedures (хранимые процедуры) — это объект�
 
 Хранимые процедуры позволяют перенести логику ближе к данным, повысить эффективность и контроль доступа.
 
-**17. Describe the Process of Database Normalization and Denormalization.**
-
----
+## **17. Describe the Process of Database Normalization and Denormalization.**
 
 **Database Normalization** is the process of organizing data to reduce redundancy and improve data integrity.
 
@@ -938,9 +904,7 @@ Example: Instead of storing customer data in every order row, create a separate 
 
 Нормализация повышает согласованность, денормализация ускоряет чтение.
 
-**18. How to Handle Concurrent Data Access and Prevent Deadlocks?**
-
----
+## **18. How to Handle Concurrent Data Access and Prevent Deadlocks?**
 
 To handle concurrent data access and prevent deadlocks:
 
@@ -982,9 +946,7 @@ In short: minimize lock time, maintain consistent locking order, use proper inde
 
 Главное — минимизировать время блокировок и соблюдать предсказуемый порядок доступа к данным.
 
-**19. Explain the Concept of Database Indexing and its Importance in Query Performance.**
-
----
+## **19. Explain the Concept of Database Indexing and its Importance in Query Performance.**
 
 **Database indexing** is a technique that improves query performance by creating a data structure that allows fast lookup of rows without scanning the entire table.
 
@@ -1040,9 +1002,7 @@ In short: indexes dramatically improve read performance but add write overhead.
 
 - Индексы существенно ускоряют чтение, но увеличивают нагрузку при записи.
 
-**20, What are the Different types of Database Partitioning and When would we Use Each Type?**
-
----
+## **20, What are the Different types of Database Partitioning and When would we Use Each Type?**
 
 **Database partitioning** splits a large table into smaller parts (partitions) to improve performance and manageability.
 
@@ -1112,9 +1072,7 @@ In short:
 
 Выбор зависит от структуры данных и характера запросов.
 
-**21. Describe the Role of a Data Lake in a Big Data Architecture.**
-
----
+## **21. Describe the Role of a Data Lake in a Big Data Architecture.**
 
 A **Data Lake** is a centralized storage system designed to hold large volumes of raw data in its native format (structured, semi-structured, and unstructured).
 
@@ -1177,9 +1135,7 @@ A Data Lake stores everything first, then structures it when needed for analytic
 
 Коротко: Data Lake — это масштабируемое хранилище для всех типов данных в Big Data-системе.
 
-**22. Explain the Use of Caching Strategies to Improve Database Performance.**
-
----
+## **22. Explain the Use of Caching Strategies to Improve Database Performance.**
 
 **Caching **improves database performance by storing frequently accessed data in a faster layer (memory) to reduce repeated database queries.
 
@@ -1253,9 +1209,7 @@ In short: caching shifts read pressure away from the database and significantly 
 
 Кэширование значительно повышает производительность при правильной стратегии.
 
-**23. Describe the Process of Implementing Database Security and Encryption.**
-
----
+## **23. Describe the Process of Implementing Database Security and Encryption.**
 
 **Implementing database security** and encryption involves multiple layers of protection.
 
@@ -1333,9 +1287,7 @@ Database security requires layered protection — access control, encryption, mo
 
 Безопасность БД — это комплекс мер, включающий контроль доступа, шифрование и постоянный мониторинг.
 
-**24. How to Handle Database Migrations in a Continuous Deployment Environment?**
-
----
+## **24. How to Handle Database Migrations in a Continuous Deployment Environment?**
 
 Handle database migrations in continuous deployment by making them safe, automated, and reversible:
 
@@ -1395,9 +1347,7 @@ Backward-compatible подход (expand/contract): сначала добавл�
 
 План отката: чаще roll-forward, старые поля держать до стабилизации, бэкапы проверять.
 
-**25, Explain the Concept of Data Replication and Its Importance in a Distributed Database System.**
-
----
+## **25. Explain the Concept of Data Replication and Its Importance in a Distributed Database System.**
 
 **Data replication** is the process of copying and maintaining the same data across multiple database nodes in a distributed system.
 
@@ -1469,9 +1419,7 @@ In short: Replication improves availability, scalability, and reliability in dis
 
 **Репликация** — ключевой механизм повышения надёжности и масштабируемости распределённых систем.
 
-**26. Describe the Architecture of a NoSQL Database and Its Use Cases.**
-
----
+## **26. Describe the Architecture of a NoSQL Database and Its Use Cases.**
 
 A **NoSQL database** is designed for scalability, flexibility, and distributed systems. Its architecture differs from traditional relational databases.
 
@@ -1561,9 +1509,7 @@ In short:
 
 NoSQL используется там, где важны масштабируемость и гибкость структуры данных.
 
-**27. What Are the Best Practices for Optimizing ETL Processes in a Large-Scale Data Environment?**
-
----
+## **27. What Are the Best Practices for Optimizing ETL Processes in a Large-Scale Data Environment?**
 
 **Optimizing ETL** in a large-scale data environment requires performance, scalability, and reliability practices.
 
@@ -1622,9 +1568,7 @@ Incremental processing, parallelism, efficient storage formats, monitoring, and 
 
 Главное — масштабируемость, надёжность и контроль качества данных.
 
-**28. How Do You Handle Real-Time Data Streaming and Processing?**
-
----
+## **28. How Do You Handle Real-Time Data Streaming and Processing?**
 
 **Handle real-time data streaming** and processing by building a pipeline that can ingest → process → store → serve events with low latency and reliability.
 

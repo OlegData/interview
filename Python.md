@@ -107,7 +107,7 @@ The optional clauses inside a try block are else and finally.
 
 Строка в Python — это неизменяемая последовательность Unicode-символов, используемая для представления текста. Она создаётся с помощью одинарных, двойных или тройных кавычек (для многострочных строк).
 
-## ## **10. What is slicing in Python?**
+## **10. What is slicing in Python?**
 
 **Slicing** is a way to extract a portion of a sequence using the syntax sequence[start:stop:step]. start is inclusive, stop is exclusive, and step defines the interval.
 Example: my_list[1:4]
@@ -215,7 +215,7 @@ setattr(MyClass, "attribute", value)
 ## **24. What are Errors and Exceptions in Python programs?**
 
 **Errors** are problems in a program that prevent it from running correctly. They can be syntax errors or runtime errors.
-**Exceptions** are runtime errors that occur during program execution and can be handled using try, except, else, and  
+**Exceptions** are runtime errors that occur during program execution and can be handled using try, except, else, and
 finally. Handling exceptions allows the program to continue running instead of crashing.
 
 **Ошибки** (Errors) — это проблемы в программе, которые мешают её корректному выполнению. Это могут быть синтаксические  
@@ -231,7 +231,7 @@ You raise exceptions using the raise keyword with a specific exception class. Ex
 
 ## **26. What are Python Iterators?**
 
-Python **iterators** are objects that implement the iterator protocol: they have \_\iter\_\_() and \_\next\_\_() methods. They produce items one at a time and raise StopIteration when no more items are available. Iterators are used in loops like for and allow lazy iteration.
+Python **iterators** are objects that implement the iterator protocol: they have \_\_iter\_\_() and \_\_next\_\_() methods. They produce items one at a time and raise StopIteration when no more items are available. Iterators are used in loops like for and allow lazy iteration.
 
 **Итераторы** в Python — это объекты, реализующие протокол итератора: методы \_\iter\_\_() и \_\next\_\_(). Они возвращают элементы по одному и вызывают StopIteration, когда элементы заканчиваются. Используются в цикле for и позволяют ленивую (lazy) итерацию — значения создаются по мере необходимости.
 
@@ -593,7 +593,7 @@ Path("folder") / "file.txt"
 
 В современном Python чаще используют pathlib, потому что код получается чище и удобнее.
 
-**41. How do you serialize and deserialize Python objects, and what is the purpose of libraries like pickle and json for data interchange?**
+## **41. How do you serialize and deserialize Python objects, and what is the purpose of libraries like pickle and json for data interchange?**
 
 **Serialization** is the process of converting a Python object into a format that can be stored or transmitted (file, network). **Deserialization** is the reverse process — converting that format back into a Python object.
 
@@ -826,9 +826,7 @@ Example uses:
 
 - automating system tasks
 
-Example: `subprocess.run(["ls", "-l"], capture_output=True, text=True)`
-
-This runs the command, waits for completion, and allows access to the output.
+Example: `subprocess.run(["ls", "-l"], capture_output=True, text=True)` This runs the command, waits for completion, and allows access to the output.
 
 **Модуль subprocess** используется для запуска внешних программ или системных команд из Python и взаимодействия с ними. Он позволяет запускать процессы, получать их вывод, передавать входные данные и проверять код завершения. Самая часто используемая функция — subprocess.run(), которая выполняет команду и ждёт её завершения.
 
@@ -842,9 +840,7 @@ This runs the command, waits for completion, and allows access to the output.
 
 - автоматизация системных задач
 
-Пример: `subprocess.run(["ls", "-l"], capture_output=True, text=True)`
-
-Эта команда запускается, Python ждёт её завершения и позволяет получить вывод.
+Пример: `subprocess.run(["ls", "-l"], capture_output=True, text=True)` Эта команда запускается, Python ждёт её завершения и позволяет получить вывод.
 
 ## **48. Explain the use of Python's built-in map, filter, and reduce functions, and provide examples of their usage.**
 
@@ -1564,8 +1560,6 @@ Purpose:
 
 ## **70. Explain the Global Interpreter Lock (GIL) in Python.**
 
----
-
 **The Global Interpreter Lock (GIL)** is a mechanism in CPython that ensures only one thread executes Python bytecode at a time within a single process. It exists to simplify memory management and make the interpreter thread-safe.
 
 Impact:
@@ -2284,9 +2278,7 @@ Purpose:
 
 - поддержка корректного порядка вызовов при множественном наследовании (MRO).
 
-**94. What are magic methods in Python?**
-
----
+## **94. What are magic methods in Python?**
 
 **Magic methods** (also called dunder methods) are special methods in Python that start and end with double underscores, such as \_\_init\_\_, \_\str\_\_, or \_\add\_\_. They allow developers to define how objects behave with built-in operations and syntax.
 
