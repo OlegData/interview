@@ -86,7 +86,7 @@ Fragments help keep the DOM clean and avoid unnecessary markup.
 Они позволяют компоненту возвращать несколько элементов без оборачивания их в дополнительный div.  
 Это помогает сохранить чистоту DOM и избежать лишней разметки.
 
-## **7. What is the purpose of the key prop in React?**
+## **8. What is the purpose of the key prop in React?**
 
 **The key prop in React** is used to uniquely identify elements in a list.  
 It helps React determine which items have changed, been added, or removed during re-rendering.  
@@ -96,7 +96,7 @@ This improves performance and ensures correct UI updates when working with dynam
 Оно помогает React определить, какие элементы были изменены, добавлены или удалены при повторном рендеринге.  
 Это повышает производительность и обеспечивает корректное обновление интерфейса при работе с динамическими списками.
 
-## **8. What is the consequence of using array indices as keys in React?**
+## **9. What is the consequence of using array indices as keys in React?**
 
 Using array indices as keys in React can lead to incorrect UI updates when items are added, removed, or reordered.  
 Since indices change, React may reuse the wrong components, causing bugs, state mismatches, or unexpected behavior.  
@@ -107,7 +107,7 @@ It is safe to use indices only if the list is static and never changes.
 что вызывает ошибки, потерю состояния или непредсказуемое поведение.  
 Индексы безопасно использовать только если список статический и не изменяется.
 
-## **9. What are props in React? How are they different from state?**
+## **10. What are props in React? How are they different from state?**
 
 **Props** in React are inputs passed from a parent component to a child component.  
 They are read-only and allow components to receive data and configuration from outside.
@@ -127,7 +127,7 @@ cannot be modified by the receiving component, while **state** is managed inside
 Главное отличие в том, что **props** передаются извне и не могут изменяться получающим компонентом,  
 а **state** управляется внутри компонента и может обновляться.
 
-## **10. What is the difference between React's class components and functional components?**
+## **11. What is the difference between React's class components and functional components?**
 
 **Class components** are ES6 classes that extend React.Component.  
 They can use lifecycle methods (like componentDidMount) and manage state using this.state and this.setState.  
@@ -145,7 +145,7 @@ They are simpler, cleaner, and are the modern recommended approach.
 С помощью React Hooks (например, useState и useEffect) они могут управлять состоянием и побочными эффектами.  
 Они проще, чище и являются современным рекомендуемым подходом.
 
-## **11. When should you use a class component over a function component?**
+## **12. When should you use a class component over a function component?**
 
 You should use a class component only in legacy codebases that already rely on class components or when maintaining older projects that use lifecycle methods without Hooks.  
 In modern React development, functional components with Hooks are preferred because they are simpler and more flexible.
@@ -153,7 +153,7 @@ In modern React development, functional components with Hooks are preferred beca
 Классовые компоненты стоит использовать только в устаревших проектах, где уже используется такой подход, или при поддержке старого кода с методами жизненного цикла без Hooks.  
 В современной разработке React предпочтительнее функциональные компоненты с Hooks, так как они проще и более гибкие.
 
-## **12. What is React Fiber?**.
+## **13. What is React Fiber?**
 
 **React Fiber** is the new reconciliation engine introduced in React 16.  
 It improves how React updates the UI by making rendering incremental and interruptible.  
@@ -165,7 +165,7 @@ which improves performance and responsiveness.
 Fiber позволяет React разбивать работу на небольшие части, приостанавливать и возобновлять задачи,  
 а также расставлять приоритеты обновлений, что повышает производительность и отзывчивость приложения.
 
-## **13. What is reconciliation?**
+## **14. What is reconciliation?**
 
 **Reconciliation** is the process by which React updates the DOM.  
 When state or props change, React creates a new Virtual DOM,  
@@ -177,7 +177,7 @@ and updates only the necessary parts of the real DOM.
 сравнивает его с предыдущей версией (diffing), определяет изменения и  
 обновляет только необходимые части реального DOM.
 
-## **14. What is the difference between Shadow DOM and Virtual DOM?**
+## **15. What is the difference between Shadow DOM and Virtual DOM?**
 
 **The Virtual DOM** is a lightweight JavaScript representation of the real DOM used by React to optimize UI updates.  
 It compares previous and current versions (diffing) and updates only the changed parts of the real DOM.
@@ -197,7 +197,7 @@ while the Shadow DOM is a native browser feature for encapsulation and style iso
 Главное отличие в том, что **Virtual DOM** — это техника оптимизации производительности, используемая библиотеками вроде React,  
 а Shadow DOM — нативная браузерная функция для изоляции и инкапсуляции.
 
-## **15. What is the difference between Controlled and Uncontrolled React components?**
+## **16. What is the difference between Controlled and Uncontrolled React components?**
 
 **Controlled components** are form elements whose values are managed by React state. The component controls the input value through state and updates it via event handlers. React is the single source of truth.
 
@@ -235,7 +235,7 @@ function UncontrolledInput() {
 }
 ```
 
-## **16. How would you lift the state up in a React application, and why is it necessary?**
+## **17. How would you lift the state up in a React application, and why is it necessary?**
 
 **Lifting state up** means moving shared state to the closest common parent component.  
 Instead of keeping state in child components, you store it in their parent and pass the data down via props. The parent also passes callback functions to allow children to update that state. It is necessary when multiple components need to share or synchronize the same data.  
@@ -264,7 +264,7 @@ const Child2 = ({ setCounter }) => (
 );
 ```
 
-## **17. What are Pure Components?**
+## **18. What are Pure Components?**
 
 **Pure Components** are components that prevent unnecessary re-renders by performing a shallow comparison of props (and state in class components). In **class components**, React.PureComponent automatically implements shouldComponentUpdate with shallow comparison of props and state. In **functional components**, the same behavior is achieved using React.memo.  
 React.memo wraps a component and performs a shallow comparison of props. The component re-renders only if its props change.  
@@ -279,7 +279,7 @@ const PureFunctionalExample = React.memo(function ({ value }) {
 });
 ```
 
-## **18. What is the difference between createElement and cloneElement?**
+## **19. What is the difference between createElement and cloneElement?**
 
 **React.createElement** is used to create a new React element from scratch. It takes a **type**, **props**, and **children**, and returns a**new element**. **React.cloneElement** is used to clone an existing React element and optionally modify its props or children. It keeps the original element's type and key but allows extending or overriding its props. The main difference is that **createElement creates a new element**, while **cloneElement copies and modifies an existing** one.
 
@@ -300,7 +300,7 @@ const clonedElement = React.cloneElement(element, { className: 'btn-primary' });
 
 Главное отличие в том, что **createElement создаёт новый элемент**, а **cloneElement копирует и модифицирует существующий**.
 
-## **19. What is the role of PropTypes in React?**
+## **20. What is the role of PropTypes in React?**
 
 **PropTypes** is a runtime type-checking mechanism in React used to validate the props passed to a component.  
 It helps developers catch bugs by warning in development mode if props have the wrong type or are missing when required.
@@ -325,7 +325,7 @@ MyComponent.propTypes = {
 };
 ```
 
-## **20. What are stateless components?**
+## **21. What are stateless components?**
 
 **Stateless** components are components that do not manage their own state. They receive data through props and render UI based only on those props.  
 They do not use this.state (in classes) or useState (in functions).
@@ -343,7 +343,7 @@ function StatelessComponent({ message }) {
 
 **Stateless** компоненты проще, легче тестируются и более предсказуемы, так как их результат зависит только от входных props.
 
-## **21. What are stateful components?**
+## **22. What are stateful components?**
 
 **Stateful** components are components that manage and control their own state. They store data inside the component and update it over time, which causes re-rendering when the state changes. In class components, state is managed using this.state and this.setState. In functional components, state is managed using Hooks such as useState and useReducer.
 **Stateful** components are used when a component needs to handle dynamic data, user interactions, or side effects.
@@ -363,7 +363,7 @@ function StatefulComponent() {
 
 **Stateful** компоненты — это компоненты, которые управляют собственным состоянием. Они хранят данные внутри себя и обновляют их со временем, что вызывает повторный рендер при изменении состояния. В классовых компонентах состояние управляется через this.state и this.setState. В функциональных компонентах состояние управляется с помощью хуков, таких как useState и useReducer. **Stateful** компоненты используются, когда компоненту нужно обрабатывать динамические данные, действия пользователя или побочные эффекты.
 
-## **22. What are the recommended ways for type checking of React component props?**
+## **23. What are the recommended ways for type checking of React component props?**
 
 The recommended ways for type checking React component props are **TypeScript** and **PropTypes**. **TypeScript** is the most recommended approach in modern React development. It provides static type checking at compile time, improves developer experience, catches errors early, and offers better scalability for large applications.
 
@@ -401,20 +401,20 @@ In modern projects, TypeScript is preferred, while **PropTypes** is mainly used 
 
 Рекомендуемые способы проверки типов props в React — это **TypeScript** и **PropTypes**. **TypeScript** является наиболее рекомендуемым подходом в современной разработке React. Он обеспечивает статическую проверку типов на этапе компиляции, улучшает опыт разработки, помогает находить ошибки раньше и лучше масштабируется в крупных приложениях. **PropTypes** — это механизм проверки типов во время выполнения, предназначенный для React. Он проверяет props в режиме разработки и показывает предупреждения при ошибках типов, но не работает в production и менее мощный по сравнению с TypeScript. В современных проектах предпочтение отдаётся **TypeScript**, а **PropTypes** чаще используется в небольших или устаревших проектах.
 
-## **23. Why does React recommend against mutating state?**
+## **24. Why does React recommend against mutating state?**
 
 React recommends against **mutating state** because it relies on reference comparison to detect changes. If you mutate state directly, the reference may stay the same, and React may not detect the update, which can prevent re-rendering. **Immutability** ensures predictable state updates, easier debugging, better performance optimization  
 (e.g., with PureComponent or React.memo), and compatibility with React's reconciliation process. Instead of **mutating state**, you should create a new object or array when updating it.
 
 React не рекомендует изменять (**мутировать**) state напрямую, потому что он использует сравнение ссылок для определения изменений. Если изменить объект напрямую, ссылка может остаться прежней, и React не обнаружит обновление, что может привести к отсутствию перерендеринга. Неизменяемость (**immutability**) обеспечивает предсказуемость обновлений состояния, упрощает отладку, улучшает оптимизацию производительности (например, с PureComponent или React.memo) и корректную работу механизма reconciliation. Вместо мутации состояния следует создавать новый объект или массив при обновлении.
 
-## **24. What are the benefits of using hooks in React?**
+## **25. What are the benefits of using hooks in React?**
 
 **Hooks** allow functional components to use state, lifecycle features, and side effects without writing class components. They make code simpler and easier to read. Benefits of hooks include better code reuse through custom hooks, improved separation of concerns, less boilerplate compared to classes, and easier testing. Hooks also allow logic to be organized by feature instead of lifecycle methods. Overall, hooks make components more flexible, maintainable, and reusable.
 
 **Хуки** позволяют функциональным компонентам использовать состояние, методы жизненного цикла и побочные эффекты без написания классовых компонентов. Они делают код проще и понятнее. Преимущества хуков включают повторное использование логики через пользовательские хуки, лучшее разделение ответственности, меньше шаблонного кода по сравнению с классами и более простое тестирование. Хуки позволяют организовывать логику по функциональности, а не по методам жизненного цикла. В целом хуки делают компоненты более гибкими, поддерживаемыми и переиспользуемыми.
 
-## **25. What are the rules of React hooks?**
+## **26. What are the rules of React hooks?**
 
 The rules of React Hooks are:
 
@@ -432,7 +432,7 @@ These rules ensure consistent hook execution order and correct state management.
 
 Эти правила обеспечивают корректный порядок выполнения хуков и правильное управление состоянием.
 
-## **26. What is the difference between useEffect and useLayoutEffect in React?**
+## **27. What is the difference between useEffect and useLayoutEffect in React?**
 
 The difference between **useEffect** and **useLayoutEffect** is when they run in the rendering process. **useEffect** runs asynchronously after the browser has painted the screen. It does not block visual updates and is used for data fetching, subscriptions, logging, and most side effects. **useLayoutEffect** runs synchronously after DOM mutations but before the browser paints the screen. It blocks painting until it finishes and is used when you need to measure or modify the DOM before the user sees it. In most cases, useEffect is preferred. **useLayoutEffect** should be used only when you need to read layout or make visual DOM changes immediately.
 
@@ -457,13 +457,13 @@ function Example() {
 
 Разница между **useEffect** и **useLayoutEffect** заключается в моменте их выполнения. **useEffect** выполняется асинхронно после того, как браузер отрисовал изменения на экране. Он не блокирует отображение и используется для загрузки данных, подписок, логирования и большинства побочных эффектов. **useLayoutEffect** выполняется синхронно после изменения DOM, но до того, как браузер отрисует экран. Он блокирует отрисовку до завершения и используется, когда нужно измерить или изменить DOM до того, как пользователь увидит результат. В большинстве случаев предпочтительно использовать useEffect. **useLayoutEffect** применяется только когда требуется работа с layout или немедленные визуальные изменения DOM.
 
-## **27. What does the dependency array of useEffect affect?**
+## **28. What does the dependency array of useEffect affect?**
 
 The **dependency array of useEffect** controls when the effect runs. If the dependency array is empty ([]), the effect runs only once after the initial render. If dependencies are provided ([value1, value2]), the effect runs after the initial render and again whenever any dependency changes. If no dependency array is provided, the effect runs after every render. The dependency array helps optimize performance and ensures that effects run only when necessary.
 
 **Массив зависимостей useEffect** определяет, когда будет выполняться эффект. Если массив пустой ([]), эффект выполняется только один раз после первого рендера. Если указаны зависимости ([value1, value2]), эффект выполняется после первого рендера и каждый раз, когда изменяется хотя бы одна из зависимостей. Если массив зависимостей не указан, эффект выполняется после каждого рендера. Массив зависимостей помогает оптимизировать производительность и гарантирует, что эффект запускается только при необходимости.
 
-## **28. What is the useRef hook in React and when should it be used?**
+## **29. What is the useRef hook in React and when should it be used?**
 
 **useRef** is a React hook that returns a mutable object with a .current property. It is used to store a value that persists across renders without causing a re-render when it changes. It is commonly used to access DOM elements directly, store previous values, keep mutable variables, or manage timers and intervals. Unlike state, updating **useRef** does not trigger a re-render. It should be used when you need to keep a persistent value or reference that does not affect the UI rendering.
 
@@ -483,7 +483,7 @@ function TextInputWithFocusButton() {
 
 Чаще всего используется для доступа к DOM-элементам, хранения предыдущих значений, сохранения изменяемых переменных, управления таймерами или интервалами. В отличие от state, обновление **useRef** не вызывает перерендер. Его следует использовать, когда нужно сохранить значение или ссылку, не влияющую напрямую на отображение интерфейса.
 
-## **29. What is the purpose of callback function argument format of setState() in React class components and when should it be used?**
+## **30. What is the purpose of callback function argument format of setState() in React class components and when should it be used?**
 
 The callback function argument format of setState() is used to update state based on the previous state or props. Instead of passing an object, you pass a function: **setState((prevState, props) => newState).** It should be used when the new state depends on the previous state, because state updates in React are asynchronous and may be batched. Using the functional form ensures you always receive the latest state value and avoid bugs caused by stale data.
 
@@ -494,8 +494,6 @@ this.setState((prevState, props) => ({
 ```
 
 The second callback argument of setState (setState(updater, callback)) can also be used to run code after the state has been updated and the component has re-rendered.
-
-<br>
 
 Функциональный формат аргумента setState() используется для обновления состояния на основе предыдущего state или props. Вместо объекта передаётся функция:
 **setState((prevState, props) => newState).** Его следует использовать, когда новое состояние зависит от предыдущего, потому что обновления состояния в React асинхронны и могут объединяться (batching). Функциональный формат гарантирует получение актуального значения state и предотвращает ошибки из-за устаревших данных. Второй аргумент setState (setState(updater, callback)) можно использовать для выполнения кода после обновления состояния и завершения перерендеринга компонента.

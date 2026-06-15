@@ -7,7 +7,7 @@
 **PEP 8** is the official style guide for Python code. It defines naming conventions (snake_case for functions/variables, PascalCase for classes),  
 indentation (4 spaces), line length limits, import ordering, spacing rules, and general formatting standards to keep code consistent and readable.
 
-Python — это высокоуровневый, интерпретируемый, динамически типизированный язык программирования с акцентом на читаемость и простоту. Поддерживает  
+Python — это высокоуровневый, интерпретируемый, динамически типизированный язык программирования с акцентом на читаемость и простоту. Поддерживает 
 несколько парадигм.
 
 PEP 8 — это официальный гайд по стилю кода Python. Он определяет соглашения по именованию (snake_case для функций и переменных, PascalCase для классов),  
@@ -15,16 +15,15 @@ PEP 8 — это официальный гайд по стилю кода Python
 
 ## **2. What's the process to get the home directory using '~' in Python?**
 
-Use `os.path.expanduser("~") or Path.home() from pathlib.`
+There are two common ways to get the home directory in Python.
 
-Example:
+First, using the os module:
+os.path.expanduser('~') expands the tilde (~) to the user’s home directory.
 
-```python
-os.path.expanduser("~")
+Second, using the pathlib module:
+Path.home() returns the home directory as a Path object.
 
-from pathlib import Path; Path.home()
-
-```
+````
 
 Использовать `os.path.expanduser("~")` или `Path.home()` из `pathlib`.
 
@@ -34,15 +33,13 @@ from pathlib import Path; Path.home()
 os.path.expanduser("~")
 
 from pathlib import Path; Path.home()
-```
+````
 
 ## **3. What are the built-in types available in Python?**
 
 **Immutable types:** - int, float, complex, bool, str, tuple, range, frozenset, bytes, NoneType
 
 **Mutable types:** - list, dict, set, bytearray, memoryview
-
-Да, на интервью лучше делить на изменяемые и неизменяемые.
 
 Неизменяемые (immutable): - int, float, complex, bool, str, tuple, range, frozenset, bytes, NoneType
 
@@ -58,9 +55,8 @@ Lists use [], tuples use parentheses - ().
 ## **5. How does Python handle memory management?**
 
 Python uses automatic memory management with reference counting and a garbage collector.
-Each object has a reference counter; when it drops to zero, the memory is released immediately.  
-To handle circular references, Python also uses a cyclic garbage collector that detects and frees objects involved in reference cycles.
-
+Each object has a reference counter; when it drops to zero, the memory is released immediately.
+To handle circular references, Python uses a cyclic garbage collector that detects and frees objects involved in reference cycles.
 Additionally, Python has a private heap for object allocation managed by the Python memory manager.
 
 Python использует автоматическое управление памятью через reference counting и garbage collector.
@@ -144,51 +140,48 @@ Python does not use pure call by value or call by reference — it uses call by 
 
 Функция id() возвращает уникальный идентификатор объекта. В CPython это обычно адрес памяти объекта. Используется для проверки, ссылаются ли две переменные на один и тот же объект.
 
-## **15. How is the Python thread safe?**
+## **16. How is the Python thread safe?**
 
 In CPython, thread safety is mainly ensured by the GIL (Global Interpreter Lock), which allows only one thread to execute Python bytecode at a time. This prevents race conditions at the interpreter level for memory management.
 
 However, it does not make your application logic automatically thread-safe. For shared mutable data, you still need synchronization primitives like Lock, RLock, Semaphore, etc., from the threading module.
 
-В CPython потокобезопасность обеспечивается в основном за счёт GIL (Global Interpreter Lock), который  
-позволяет выполнять байткод только одному потоку одновременно. Это защищает управление памятью на уровне  
-интерпретатора.
+В CPython потокобезопасность обеспечивается в основном за счёт GIL (Global Interpreter Lock), который позволяет выполнять байткод только одному потоку одновременно. Это защищает управление памятью на уровне интерпретатора.
 
-Но это не делает логику программы автоматически потокобезопасной. При работе с общими изменяемыми данными  
-нужно использовать примитивы синхронизации (Lock, RLock, Semaphore и т.д.) из модуля threading.
+Но это не делает логику программы автоматически потокобезопасной. При работе с общими изменяемыми данными нужно использовать примитивы синхронизации (Lock, RLock, Semaphore и т.д.) из модуля threading.
 
-## **16. What is a tuple in Python?**
+## **17. What is a tuple in Python?**
 
 **A tuple in Python** is an immutable ordered collection of elements. It can store different data types and allows indexing and slicing. Tuples are defined using parentheses () or by separating values with commas.
 
 Tuple в Python — это неизменяемая упорядоченная коллекция элементов. Она может содержать разные типы данных и поддерживает индексацию и срезы. Создаётся с помощью () или просто через запятые.
 
-## **17. What is a dictionary in Python programming?**
+## **18. What is a dictionary in Python programming?**
 
 **A dictionary in Python** is a built-in mutable mapping type that stores data as key–value pairs. Keys must be unique and immutable, while values can be of any type. Dictionaries are defined using {}. They provide fast lookup, insertion, and deletion by key.
 
 Dictionary в Python — это встроенный изменяемый тип отображения (mapping), который хранит данные в виде пар ключ–значение. Ключи должны быть уникальными и неизменяемыми, значения могут быть любого типа. Создаётся с помощью {}. Обеспечивает быстрый доступ, добавление и удаление по ключу.
 
-## **18. What is the set object in Python?**
+## **19. What is the set object in Python?**
 
 **A set in Python** is a built-in mutable, unordered collection of unique elements. It does not allow duplicate values and supports mathematical set operations like union, intersection, difference, and symmetric difference. Sets are created using {} (with elements) or the set() constructor.
 
 Set в Python — это встроенная изменяемая, неупорядоченная коллекция уникальных элементов. Дубликаты не допускаются. Поддерживает операции множеств: объединение, пересечение, разность и симметрическую разность.
 Создаётся с помощью {} (с элементами) или конструктора set().
 
-## **19. What is Class in Python?**
+## **20. What is Class in Python?**
 
 **A class in Python** is a blueprint for creating objects. It defines attributes and methods that describe the behavior of the objects. A class is defined using the class keyword. Сlasses are the foundation of object-oriented programming in Python.
 
 Класс в Python — это шаблон для создания объектов. Он определяет атрибуты и методы , которые описывают поведение объектов. Объявляется с помощью ключевого слова class. Классы — основа объектно-ориентированного программирования (ООП) в Python.
 
-## **20. What are Attributes and Methods in a Python class?**
+## **21. What are Attributes and Methods in a Python class?**
 
 Attributes are variables that belong to a class or its instances. They store the state or data of an object. Methods are functions defined inside a class that describe the behavior of its objects. They usually operate on the object's attributes and take self as the first parameter.
 
 Атрибуты — это переменные, принадлежащие классу или его экземплярам. Они хранят состояние или данные объекта. Методы — это функции, определённые внутри класса, которые описывают поведение объекта. Обычно они работают с атрибутами и принимают self как первый параметр.
 
-## **21. How to assign values for the Class attributes at runtime?**
+## **22. How to assign values for the Class attributes at runtime?**
 
 You can assign class attributes at runtime either directly through the class or dynamically using setattr(). This changes the attribute for the class itself.
 Example:
@@ -200,19 +193,19 @@ setattr(MyClass, "attribute", value)
 
 Значения атрибутам класса во время выполнения можно присвоить напрямую через класс или через setattr(). Это изменяет атрибут на уровне класса.
 
-## **22. What is Inheritance in Python programming?**
+## **23. What is Inheritance in Python programming?**
 
 **Inheritance** is an OOP feature where a class (child/subclass) derives from another class (parent/base class) and inherits its attributes and methods. It allows code reuse and extension of existing functionality. It is defined by passing the parent class in parentheses: class Child(Parent):
 
 Наследование — это механизм ООП, при котором один класс наследует атрибуты и методы другого класса . Это позволяет переиспользовать код и расширять функциональность. Объявляется через указание родительского класса в скобках: class Child(Parent):
 
-## **23. What is Composition in Python?**
+## **24. What is Composition in Python?**
 
 **Composition** is an OOP concept where one class contains an instance of another class as an attribute, instead of inheriting from it. It represents a "has-a" relationship and promotes flexibility and loose coupling. Example: a Car class containing an Engine object.
 
 Композиция — это принцип ООП, при котором один класс содержит объект другого класса как атрибут, а не наследуется от него. Это отношение типа "has-a" и даёт большую гибкость и слабую связанность. Пример: класс Car, который содержит объект Engine.
 
-## **24. What are Errors and Exceptions in Python programs?**
+## **25. What are Errors and Exceptions in Python programs?**
 
 **Errors** are problems in a program that prevent it from running correctly. They can be syntax errors or runtime errors.
 **Exceptions** are runtime errors that occur during program execution and can be handled using try, except, else, and
@@ -223,19 +216,19 @@ finally. Handling exceptions allows the program to continue running instead of c
 **Исключения** (Exceptions) — это ошибки, возникающие во время выполнения программы, которые можно обработать с помощью  
 try, except, else, finally. Обработка исключений позволяет программе не завершаться аварийно.
 
-## **25. How do you raise exceptions for a predefined condition in Python?**
+## **26. How do you raise exceptions for a predefined condition in Python?**
 
 You raise exceptions using the raise keyword with a specific exception class. Example: `raise ValueError("Invalid input")` You can also define custom exceptions by inheriting from Exception.
 
 Исключения вызываются с помощью ключевого слова raise и указания класса исключения. Также можно создавать собственные исключения, наследуясь от Exception.
 
-## **26. What are Python Iterators?**
+## **27. What are Python Iterators?**
 
 Python **iterators** are objects that implement the iterator protocol: they have \_\_iter\_\_() and \_\_next\_\_() methods. They produce items one at a time and raise StopIteration when no more items are available. Iterators are used in loops like for and allow lazy iteration.
 
 **Итераторы** в Python — это объекты, реализующие протокол итератора: методы \_\iter\_\_() и \_\next\_\_(). Они возвращают элементы по одному и вызывают StopIteration, когда элементы заканчиваются. Используются в цикле for и позволяют ленивую (lazy) итерацию — значения создаются по мере необходимости.
 
-## **27. What is the difference between an Iterator and an Iterable?**
+## **28. What is the difference between an Iterator and an Iterable?**
 
 **An Iterable** (list, tuple, string) is an object that can return an iterator. It implements the `__iter__`() method and can be used in a for loop.
 **An Iterator** is an object that actually produces the next value. It implements both `__iter__`() and `__next__`() and keeps state during iteration.
@@ -243,13 +236,13 @@ Python **iterators** are objects that implement the iterator protocol: they have
 **Iterable** (list, tuple, string) можно перебирать — он реализует `__iter__`() и возвращает итератор.
 **Iterator** — это объект, который возвращает элементы по одному. Он реализует `__iter__`() и `__next__`() и хранит состояние во время итерации.
 
-## **30. What are Python Generators?**
+## **29. What are Python Generators?**
 
 **Python generators** are a special type of iterator that produce values lazily using the yield keyword. Instead of returning all values at once, they generate them one by one and maintain their state between calls. They are memory-efficient and commonly used for large datasets or infinite sequences.
 
 **Генераторы** в Python — это особый тип итераторов, которые создают значения лениво с помощью yield. Они не возвращают все данные сразу, а генерируют их по одному и сохраняют своё состояние между вызовами. Они экономят память и часто используются для больших наборов данных или бесконечных последовательностей.
 
-## **31. What are metaclasses in Python, and when would you use them in your code?**
+## **30. What are metaclasses in Python, and when would you use them in your code?**
 
 **Metaclasses in Python** are classes that define how other classes are created. In Python, everything is an object, including classes. A metaclass controls the process of class creation. Normally, classes are created by the default metaclass type.
 
@@ -293,9 +286,9 @@ In practice, metaclasses are rarely needed in normal application code and are mo
 
 В обычном коде метаклассы используются редко и чаще встречаются во фреймворках.
 
-## **32. Explain the purpose of the contextlib module and how it is used for managing resources in Python.**
+## **30. Explain the purpose of the contextlib module and how it is used for managing resources in Python.**
 
-**The contextlib module** provides utilities for creating and working with context managers, which help manage resources safely using the with statement. It ensures that resources (files, database connections, locks, etc.) are properly acquired and released, even if an exception occurs. A common way to create a context manager with contextlib is using the @contextmanager decorator.
+**The contextlib module** provides utilities for working with context managers, which are used to manage resources like files or connections. It ensures that resources are properly acquired and automatically released, even if an exception occurs, typically using the with statement. It also simplifies creating custom context managers with the @contextmanager decorator, avoiding the need to write full classes. For example, it can be used to safely open and close files or manage database connections.
 
 Example:
 
@@ -361,15 +354,15 @@ Common tools in contextlib include:
 
 ## **33. What is method resolution order (MRO) in Python, and how is it determined for classes with multiple inheritance?**
 
-**Method Resolution Order (MRO)** is the order in which Python searches for a method or attribute in a class hierarchy. It is especially important in multiple inheritance, where a class inherits from more than one parent class.
+**Method Resolution Order (MRO)** defines the order in which Python looks for methods and attributes in a class hierarchy. In multiple inheritance, Python uses the C3 linearization algorithm to determine a consistent order.
 
-Python determines MRO using the C3 linearization algorithm, which ensures:
+It ensures that:
 
-- A consistent search order
+- the child class is checked before parent classes
+- the order of base classes is preserved
+- each class appears only once in the hierachy
 
-- Parents are checked before grandparents
-
-- The order of base classes is preserved
+The MRO can be viewed using the **mro** attribute or the mro() method.
 
 Example:
 
@@ -405,7 +398,7 @@ Python использует алгоритм C3 linearization, который:
 
 ## **34. How can you work with binary data in Python, and what are the benefits of using the struct module?**
 
-**Binary data in Python** can be handled using bytes, bytearray, and binary file modes (rb, wb). Numbers can also be converted to and from bytes using int.to_bytes() and int.from_bytes(). The struct module allows packing Python values into binary format and unpacking binary data into Python types using format strings.
+**Binary data in Python** is handled using bytes, bytearray, and binary file modes (rb, wb). You can also convert numbers with int.to_bytes() and int.from_bytes(). The struct module is used to pack Python values into binary format and unpack them back using format strings.
 
 Benefits of struct:
 
@@ -427,7 +420,7 @@ Benefits of struct:
 
 ## **35. What is the GIL, and how does it affect CPU-bound and I/O-bound tasks differently?**
 
-**The GIL (Global Interpreter Lock)** is a mechanism in CPython that allows only one thread to execute Python bytecode at a time. It is used to simplify memory management and make the interpreter thread-safe. For CPU-bound tasks, the GIL becomes a bottleneck because multiple threads cannot run Python code in parallel on multiple CPU cores. In such cases, multiprocessing is usually used instead of multithreading. For I/O-bound tasks, the GIL is less of a problem because it is released during I/O operations (such as network requests or file access). This allows other threads to run while one thread is waiting for I/O, making multithreading effective for these tasks.
+**The Global Interpreter Lock (GIL)** is a mechanism in Python that ensures only one thread executes Python bytecode at a time. This limits performance for CPU-bound tasks, as threads cannot run in parallel on multiple CPU cores. However, for I/O-bound tasks, threads can release the GIL while waiting for I/O operations (such as file or network access), allowing other threads to run. This is why multithreading is effective for I/O-bound tasks but not for CPU-bound tasks.
 
 **GIL (Global Interpreter Lock)** — это механизм в CPython, который позволяет только одному потоку одновременно выполнять Python bytecode. Он упрощает управление памятью и делает интерпретатор потокобезопасным. Для CPU-bound задач GIL становится узким местом, потому что несколько потоков не могут выполнять Python-код параллельно на разных ядрах процессора. Поэтому в таких случаях чаще используют multiprocessing. Для I/O-bound задач GIL менее проблемен, потому что он освобождается во время операций ввода-вывода (например, сетевые запросы или работа с файлами). Пока один поток ждёт I/O, другие могут выполняться, поэтому multithreading работает эффективно.
 
@@ -435,24 +428,8 @@ Benefits of struct:
 
 **threading** uses multiple threads within a single process. Threads share the same memory space but are limited by the GIL, so only one thread executes Python bytecode at a time.
 **multiprocessing** creates separate processes. Each process has its own Python interpreter and memory space, so it is not limited by the GIL and can run on multiple CPU cores.
-
-When to use them:
-
-- threading — for I/O-bound tasks (network calls, file operations, waiting for external services).
-
-- multiprocessing — for CPU-bound tasks (heavy calculations, data processing) where true parallel execution on multiple cores is needed.
-
-Key differences:
-
-- Memory: shared in threads, separate in processes
-
-- GIL: affects threads, not processes
-
-- Overhead: threads are lighter; processes are heavier but allow real parallelism
-
-threading использует несколько потоков внутри одного процесса. Потоки разделяют одну память, но ограничены GIL, поэтому одновременно выполняется только один Python bytecode.
-
-multiprocessing создаёт отдельные процессы. У каждого процесса свой интерпретатор Python и своя память, поэтому они не ограничены GIL и могут работать на разных ядрах процессора.
+However, multiprocessing has higher overhead and requires inter-process communication.
+Threading is best suited for I/O-bound tasks, while multiprocessing is preferred for CPU-bound tasks.
 
 Когда использовать:
 
@@ -506,7 +483,7 @@ How they work:
 
 - \_\_delete\_\_(self, instance) — controls attribute deletion
 
-Descriptors are used to customize attribute behavior, such as validation, computed attributes, lazy loading, or access control. They are also the mechanism behind features like @property, @classmethod, @staticmethod, and methods in classes.
+Descriptors are used to customize attribute behavior, such as validation, computed attributes, lazy loading, or access control. They are also the underlying mechanism behind property, classmethod, and staticmethod.
 
 Дескрипторы — это объекты, которые управляют доступом к атрибутам класса. Они реализуют специальные методы \_\_get\_\_, \_\_set\_\_ и \_\_delete\_\_. Когда происходит доступ к атрибуту объекта, Python вызывает методы дескриптора вместо прямого обращения к атрибуту.
 
