@@ -192,7 +192,7 @@ Common prefixes:
 
 Progressive enhancement is a development approach where you start with basic functionality and styling that works in all browsers, then add advanced CSS features for modern browsers without breaking the experience for older ones.
 
-## **21. What are the different position values in CSS?*
+## **21. What are the different position values in CSS?**
 
 CSS provides five main position values: static, relative, absolute, fixed, and sticky.
 
@@ -405,8 +405,11 @@ Breakpoints are specific screen widths at which the layout or styling of a websi
 Common breakpoints:
 
   576px → mobile
+
   768px → tablet
+
   992px → small desktop
+
   1200px → large desktop
 
 Important: Modern responsive design focuses on content-based breakpoints rather than targeting specific devices.
