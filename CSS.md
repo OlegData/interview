@@ -110,40 +110,40 @@ The CSS box model describes how elements are structured and how their size is ca
 
 From inside to outside:
 
-  Content - the actual text or image.
-  Padding - space between the content and the border.
-  Border - the border around the element.
-  Margin - space outside the border.
+- Content - the actual text or image.
+- Padding - space between the content and the border.
+- Border - the border around the element.
+- Margin - space outside the border.
 In short, the box model consists of content, padding, border, and margin, and it determines the final size and spacing of an element.
 
 ## **12. What are CSS units (px, em, rem, %, vw, vh)?**
 
 CSS units are used to define sizes, spacing, and dimensions of elements.
 
-  px (pixels) – fixed unit.
-  em – relative to the font size of the parent element.
-  rem – relative to the root (html) font size.
-  % – relative to the parent element.
-  vw (viewport width) – relative to the browser window width.
-  vh (viewport height) – relative to the browser window height.
+- px (pixels) – fixed unit.
+- em – relative to the font size of the parent element.
+- rem – relative to the root (html) font size.
+- % – relative to the parent element.
+- vw (viewport width) – relative to the browser window width.
+- vh (viewport height) – relative to the browser window height.
 
 ## **13. What is the difference between absolute and relative units?**
 
 Absolute units have fixed values and do not change based on other elements or screen size, while relative units depend on another value such as the parent element, root element, or viewport size.
 Examples of absolute units:
 
-  px
-  cm
-  mm
-  in
+- px
+- cm
+- mm
+- in
 
 Examples of relative units:
 
-  em
-  rem
-  %
-  vw
-  vh
+- em
+- rem
+- %
+- vw
+- vh
 
 In short: absolute units are fixed, whereas relative units adapt based on another reference value.
 
@@ -183,10 +183,10 @@ Vendor prefixes are prefixes added to CSS properties to support experimental or 
 
 Common prefixes:
 
-  -webkit- → Chrome, Safari
-  -moz- → Firefox
-  -ms- → Internet Explorer
-  -o- → Opera
+- -webkit- → Chrome, Safari
+- -moz- → Firefox
+- -ms- → Internet Explorer
+- -o- → Opera
 
 ## **20. What is progressive enhancement in CSS?**
 
@@ -198,20 +198,20 @@ CSS provides five main position values: static, relative, absolute, fixed, and s
 
 They control how an element is positioned on the page.
 
-  static – default position; the element follows the normal document flow.
-  relative – positioned relative to its normal position.
-  absolute – positioned relative to the nearest positioned ancestor.
-  fixed – positioned relative to the viewport and stays in place when scrolling.
-  sticky – behaves like relative until a scroll threshold is reached, then acts like fixed.
+- static – default position; the element follows the normal document flow.
+- relative – positioned relative to its normal position.
+- absolute – positioned relative to the nearest positioned ancestor.
+- fixed – positioned relative to the viewport and stays in place when scrolling.
+- sticky – behaves like relative until a scroll threshold is reached, then acts like fixed.
 
 ## **22. What is the difference between static, relative, absolute, and fixed positioning?**
 
 The main difference is how the element is positioned and what it is positioned relative to.
 
-  static – default positioning. The element follows the normal document flow. Properties like top, left, right, and bottom do not work.
-  relative – the element remains in the normal flow, but can be moved relative to its original position using top, left, right, or bottom.
-  absolute – the element is removed from the normal flow and positioned relative to the nearest parent that has a position other than static.
-  fixed – the element is removed from the normal flow and positioned relative to the viewport. It stays in the same place even when the page is scrolled.
+- static – default positioning. The element follows the normal document flow. Properties like top, left, right, and bottom do not work.
+- relative – the element remains in the normal flow, but can be moved relative to its original position using top, left, right, or bottom.
+- absolute – the element is removed from the normal flow and positioned relative to the nearest parent that has a position other than static.
+- fixed – the element is removed from the normal flow and positioned relative to the viewport. It stays in the same place even when the page is scrolled.
 
 ## **23. What is sticky positioning?**
 
@@ -230,9 +230,9 @@ Floats are a CSS property used to position elements to the left or right of a co
 
 Values:
 
-  float: left
-  float: right
-  float: none (default)
+- float: left
+- float: right
+- float: none (default)
 
 One issue with floats is that parent containers may collapse because floated elements are removed from the normal document flow. This is often fixed using clear or a clearfix technique.
 
@@ -254,9 +254,9 @@ Clearfix is a technique used to make a parent container properly contain its flo
 
 The difference is how the elements behave in the layout.
 
-  Block elements start on a new line and take up the full available width.
-  Inline elements stay in the same line and only take up as much width as their content.
-  Inline-block elements stay in the same line like inline elements, but allow width and height to be set like block elements.
+- Block elements start on a new line and take up the full available width.
+- Inline elements stay in the same line and only take up as much width as their content.
+- Inline-block elements stay in the same line like inline elements, but allow width and height to be set like block elements.
 
 ## **27. What is CSS Flexbox?**
 
@@ -270,11 +270,11 @@ Flexbox (Flexible Box Layout) is a one-dimensional CSS layout model used to alig
 
 Common properties:
 
-  justify-content – aligns items along the main axis.
-  align-items – aligns items along the cross axis.
-  flex-direction – defines the direction (row or column).
-  gap – adds space between items.
-  flex-wrap – allows items to wrap onto multiple lines.
+- justify-content – aligns items along the main axis.
+- align-items – aligns items along the cross axis.
+- flex-direction – defines the direction (row or column).
+- gap – adds space between items.
+- flex-wrap – allows items to wrap onto multiple lines.
 
 ## **28. What are the main properties of flex container?**
 
@@ -282,12 +282,12 @@ The main properties of a flex container are used to control the direction, align
 
 Main flex container properties:
 
-  flex-direction – defines the main axis (row, column, row-reverse, column-reverse).
-  justify-content – aligns items along the main axis.
-  align-items – aligns items along the cross axis.
-  align-content – aligns multiple rows of items when wrapping is enabled.
-  flex-wrap – allows items to wrap onto multiple lines.
-  gap – sets spacing between flex items.
+- flex-direction – defines the main axis (row, column, row-reverse, column-reverse).
+- justify-content – aligns items along the main axis.
+- align-items – aligns items along the cross axis.
+- align-content – aligns multiple rows of items when wrapping is enabled.
+- flex-wrap – allows items to wrap onto multiple lines.
+- gap – sets spacing between flex items.
 
 ## **29. What are the main properties of flex items?**
 
@@ -295,12 +295,12 @@ Flex item properties control how individual items behave inside a flex container
 
 The main properties are:
 
-  flex-grow – defines how much an item can grow relative to other items.
-  flex-shrink – defines how much an item can shrink if there isn't enough space.
-  flex-basis – sets the initial size of an item before growing or shrinking.
-  flex – shorthand for flex-grow, flex-shrink, and flex-basis.
-  align-self – overrides the container's align-items value for a specific item.
-  order – changes the visual order of items.
+- flex-grow – defines how much an item can grow relative to other items.
+- flex-shrink – defines how much an item can shrink if there isn't enough space.
+- flex-basis – sets the initial size of an item before growing or shrinking.
+- flex – shorthand for flex-grow, flex-shrink, and flex-basis.
+- align-self – overrides the container's align-items value for a specific item.
+- order – changes the visual order of items.
 
 ## **30. What is CSS Grid?**
 
@@ -308,39 +308,39 @@ CSS Grid is a two-dimensional layout system that allows you to create rows and c
 
 Key Grid properties:
 
-  grid-template-columns – defines columns.
-  grid-template-rows – defines rows.
-  gap – spacing between grid items.
-  grid-column – controls item column placement.
-  grid-row – controls item row placement.
+- grid-template-columns – defines columns.
+- grid-template-rows – defines rows.
+- gap – spacing between grid items.
+- grid-column – controls item column placement.
+- grid-row – controls item row placement.
 
 ## **31. What is the difference between Flexbox and Grid?**
 
 The main difference is that Flexbox is a one-dimensional layout system, while Grid is a two-dimensional layout system.
 
-  Flexbox works with either a row or a column at a time.
-  Grid works with rows and columns simultaneously.
+- Flexbox works with either a row or a column at a time.
+- Grid works with rows and columns simultaneously.
 
 Use Flexbox when:
 
-  Aligning items in a single row or column.
-  Building navigation menus.
-  Centering content.
-  Creating small UI components.
+- Aligning items in a single row or column.
+- Building navigation menus.
+- Centering content.
+- Creating small UI components.
 
 Use Grid when:
 
-  Creating full-page layouts.
-  Building complex row-and-column structures.
-  Controlling both horizontal and vertical placement.
+- Creating full-page layouts.
+- Building complex row-and-column structures.
+- Controlling both horizontal and vertical placement.
 
 ## **32. What are grid lines, tracks, and areas?**
 
 In CSS Grid, grid lines, tracks, and areas are the fundamental building blocks of a grid layout.
 
-  Grid lines are the horizontal and vertical lines that divide the grid.
-  Grid tracks are the spaces between two grid lines (rows or columns).
-  Grid areas are rectangular sections made up of one or more grid cells.
+- Grid lines are the horizontal and vertical lines that divide the grid.
+- Grid tracks are the spaces between two grid lines (rows or columns).
+- Grid areas are rectangular sections made up of one or more grid cells.
 
 ## **33. What is the fr unit in CSS Grid?**
 
@@ -348,9 +348,9 @@ The fr (fraction) unit is a CSS Grid unit that represents a fraction of the avai
 
 The available space is divided into 4 parts:
 
-  First column → 1 part (25%)
-  Second column → 2 parts (50%)
-  Third column → 1 part (25%)
+- First column → 1 part (25%)
+- Second column → 2 parts (50%)
+- Third column → 1 part (25%)
 
 The fr unit is preferred over percentages because it automatically distributes the remaining available space and makes responsive layouts easier to create.
 
@@ -360,10 +360,10 @@ Media queries are a CSS feature used to apply different styles based on the devi
 
 Use cases:
 
-  Mobile-friendly layouts
-  Responsive navigation menus
-  Adjusting font sizes and spacing
-  Showing or hiding elements on different devices
+- Mobile-friendly layouts
+- Responsive navigation menus
+- Adjusting font sizes and spacing
+- Showing or hiding elements on different devices
 
 ## **35. What is mobile-first vs desktop-first approach?**
 
@@ -404,9 +404,9 @@ Breakpoints are specific screen widths at which the layout or styling of a websi
 
 Common breakpoints:
 
--  576px → mobile
--  768px → tablet
--  992px → small desktop
--  1200px → large desktop
+- 576px → mobile
+- 768px → tablet
+- 992px → small desktop
+- 1200px → large desktop
 
 Important: Modern responsive design focuses on content-based breakpoints rather than targeting specific devices.
